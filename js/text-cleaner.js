@@ -90,20 +90,3 @@ const textarea = document.getElementById("input-text");
                 .filter(word => !stopWords.has(word.toLowerCase()))
                 .join(" ");
         }
-
-
-
-
-        function copyResult() {
-            const text = document.getElementById('input-text').value;
-            if (text === '') {
-                showNotification('No result to copy', 'error');
-                return;
-            }
-            copyToClipboard(text, document.getElementById('copy-btn'));
-        }
-
-        function clearAll() {
-            document.getElementById('input-text').value = '';
-            document.getElementById('result').textContent = 'Your cleaned text will appear here...';
-        }
