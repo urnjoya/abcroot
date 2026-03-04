@@ -12,7 +12,8 @@ function clearAll() {
     document.getElementById('input-text').value = '';
     document.getElementById('result').textContent = 'Your result will appear here...';
 }
-function clearAllAmc(){
+// ///
+function clearAllAmc() {
     document.getElementById('result').textContent = 'Your result will appear here...';
 }
 function copyResultEditorAdj() {
@@ -23,9 +24,23 @@ function copyResultEditorAdj() {
     }
     copyToClipboard(resultEl, document.getElementById('copy-btn'));
 }
+//  //
 function clearAllEditor() {
     document.getElementById("input-text").innerHTML = "";
     document.getElementById("result").innerHTML = "Your result will appear here...";
 }
 
-
+// True Start
+function copyResultEditorAdjTrue() {
+    const resultEl = document.getElementById("result").textContent;
+    if (resultEl == 'Your result will appear here...') {
+        showNotification('No result to copy', "error");
+        return;
+    }
+    copyToClipboard(resultEl, document.getElementById('copy-btn'));
+}
+function clearAllEditorTrue() {
+    document.getElementById("input-text") = "";
+    document.getElementById("result").textContent = "Your result will appear here...";
+}
+// True End
