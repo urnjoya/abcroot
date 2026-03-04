@@ -22,7 +22,7 @@
         "rank-id": "2",
         "type": "tool",
         "title": "Rich Text <--> Markdown",
-        "slug": "rich-text-markdown.html",
+        "slug": "text-markdown-converter.html",
         "category": "dev-tool",
         "icon": "🆎",
         "short_description": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt.",
@@ -214,4 +214,5 @@
     }
 
 ]
+
 
