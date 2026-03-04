@@ -40,7 +40,8 @@ function copyResultEditorAdjTrue() {
     copyToClipboard(resultEl, document.getElementById('copy-btn'));
 }
 function clearAllEditorTrue() {
-    document.getElementById("input-text") = "";
+    document.getElementById("input-text").innerHTMl = "";
     document.getElementById("result").textContent = "Your result will appear here...";
 }
 // True End
+
