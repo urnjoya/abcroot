@@ -6,7 +6,7 @@ const BASE_PATH = window.location.origin + window.location.pathname.split('/').s
         }
         let pages = [];
 
-        fetch('https://urnjoya.github.io/abcroot/data/json/search-index.json')
+        fetch('https://abcroot.xyz/data/json/search-index.json')
             .then(res => res.json())
             .then(data => pages = data);
 
