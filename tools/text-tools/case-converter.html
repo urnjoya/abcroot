@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
+    <base href="../../">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,13 +31,15 @@
     <meta name="twitter:image" content="https://abcroot.xyz/assets/case-converter-preview.png">
     <title>Case Converter - Free Online Tool | abcroot</title>
     <link rel="canonical" href="https://abcroot.xyz/tools/text-tools/case-converter.html">
-    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
-    <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <script src="../../js/analytics.js"></script>
-    <link rel="preload" href="../../css/main.css" as="style">
-    <link rel="stylesheet" href="../../css/main.css">
+    <script src="js/analytics.js"></script>
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="css/main-a.css" as="style">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main-a.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -62,77 +65,268 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container navbar-container">
-            <a href="../../" class="navbar-logo">abcroot</a>
-                        <div class="navbar-search">
-                                <div class="search-input">
-                                        <span class="search-icon">🔍</span>
-                                        <input type="text" id="searchInput" placeholder="Search tools..."
-                        autocomplete="off">
-                                        <div id="searchResults" class="search-results"></div>
-                                    </div>
-                            </div>
+            <a href="" class="navbar-logo" aria-label="abcroot homepage">abcroot</a>
+            <div class="navbar-search">
+                <div class="search-input">
+                    <span class="search-icon">🔍</span>
+                    <input type="search" id="searchInput" placeholder="Search tools..." autocomplete="off"
+                        aria-label="Search tools">
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+            </div>
             <div class="navbar-menu">
                 <ul class="navbar-links">
-                    <li><a href="../../about.html" class="navbar-link">About</a></li>
-                    <li><a href="../../contact.html" class="navbar-link">Contact</a></li>
+                    <li><a href="about.html" class="navbar-link">About</a></li>
+                    <li><a href="contact.html" class="navbar-link">Contact</a></li>
                     <li class="navbar-link" id="categoryBtn">Category</li>
                 </ul>
             </div>
-            <button class="mobile-menu-toggle"><span class="mobile-menu-icon"></span></button>
+            <button class="mobile-menu-toggle" aria-label="humburgur"><span class="mobile-menu-icon"></span></button>
         </div>
     </nav>
     <!-- Heading -->
-    <div class="page-header page-header-sm">
-        <h1 class="page-title">Case Converter</h1>
-    </div>
+    <header class="page-header page-header-sm">
+        <h1 class="page-title" aria-label="Page title">Case Converter</h1>
+    </header>
     <!-- Main -->
-    <section class="section-sm">
-        <div class="container">
+    <main class="section-sm">
+        <section class="container" style="max-width: fit-content;">
             <div class="tool-interface">
-                <div class="form-group">
-                    <!-- <label class="form-label">Enter your text:</label> -->
-                    <textarea id="input-text" class="form-textarea" placeholder="Type or paste your text here..."
-                        rows="6" style="font-family: inherit;"></textarea>
-                </div>
+                <div class="p1">
+                    <div class="form-group">
+                        <textarea id="input-text" class="form-textarea" placeholder="Type or paste text here..."
+                            rows="6" style="font-family: inherit;"></textarea>
+                        <button onclick="clearAll()" class="clear-btn btn btn-secondary mt-lg" style="width: 100%;">
+                            <svg class="code-option__button-svg" width="17" height="17" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <g stroke="#ffffff" stroke-width="2" fill="none" fill-rule="evenodd"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <!-- Trash Bin Body -->
+                                    <path d="M3 6h18"></path>
+                                    <path
+                                        d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                    </path>
+                                    <!-- Vertical Lines -->
+                                    <line x1="10" y1="11" x2="10" y2="17"></line>
+                                    <line x1="14" y1="11" x2="14" y2="17"></line>
+                                </g>
+                            </svg>
 
-                <div class="grid grid-cols-auto" style="gap: var(--space-sm);">
-                    <button onclick="convertCase('upper')" class="btn btn-theme-a">UPPERCASE</button>
-                    <button onclick="convertCase('lower')" class="btn btn-theme-a">lowercase</button>
-                    <button onclick="convertCase('title')" class="btn btn-theme-a">Title Case</button>
-                    <button onclick="convertCase('sentence')" class="btn btn-theme-a">Sentence case</button>
-                    <button onclick="convertCase('capitalized')" class="btn btn-theme-a">Capitalized Case</button>
-                    <button onclick="convertCase('toggle')" class="btn btn-theme-a">Toggle Case</button>
-                    <button onclick="convertCase('alternative')" class="btn btn-theme-a">Alternate Case</button>
-                    <button onclick="convertCase('pascal')" class="btn btn-theme-a">Pascal Case</button>
-                    <button onclick="convertCase('camel')" class="btn btn-theme-a">Camel Case</button>
-                    <button onclick="convertCase('snake')" class="btn btn-theme-a">Snake Case</button>
-                    <button onclick="convertCase('kebab')" class="btn btn-theme-a">Kebab Case</button>
-                </div>
-
-                <div class="result-card">
-                    <div class="result-header">
-                        <span class="result-label">Result:</span>
-                        <button onclick="copyResult()" class="copy-btn" id="copy-btn">📋 Copy</button>
+                            Clear All
+                        </button>
                     </div>
-                    <div class="result-content" id="result">Your result will appear here...</div>
+                    <div class="result-card">
+                        <div class="result-content" id="result" role="status">Your result will appear here...</div>
+                        <button onclick="copyResult()" class="copy-btn" id="copy-btn">
+                            <svg class="code-option__button-svg" width="13" height="17"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                <g stroke="#ffffff" stroke-width="2" fill="none" fill-rule="evenodd">
+                                    <path d="M5 5h7v11H5z"></path>
+                                    <path d="M1 15V1h10"></path>
+                                </g>
+                            </svg>
+                            Copy to Clipboard
+                        </button>
+                    </div>
                 </div>
 
-                <button onclick="clearAll()" class="btn btn-secondary mt-lg" style="width: 100%;">Clear All</button>
-            </div>
-            <div class="card">
-                <h2 class="card-title">How to Use</h2>
-                <div class="card-body">
-                    <ol style="color: var(--color-text-secondary); line-height: 1.8; padding-left: var(--space-lg);">
-                        <li>Enter your text in the input field.</li>
-                        <li>Click any of the case conversion buttons to convert your text.</li>
-                        <li>Copy the result using the copy button.</li>
-                    </ol>
+                <div class="grid grid-cols-auto ans" style="gap: var(--space-sm);">
+                    <button onclick="convertCase('upper')" class="btn btn-main btn-primary" title="ALT+U"
+                        aria-label="Convert text to uppercase">
+                        UPPERCASE
+                    </button>
+                    <button onclick="convertCase('lower')" class="btn btn-main btn-primary" title="ALT+L"
+                        aria-label="Convert text to lowercase">
+                        lowercase
+                    </button>
+                    <button onclick="convertCase('title')" class="btn btn-main btn-primary" title="ALT+T"
+                        aria-label="Convert text to title case">
+                        Title Case
+                    </button>
+                    <button onclick="convertCase('sentence')" class="btn btn-main btn-primary" title="ALT+S"
+                        aria-label="Convert text to sentence case">
+                        Sentence Case
+                    </button>
+                    <button onclick="convertCase('capitalized')" class="btn btn-main btn-primary" title="ALT+C"
+                        aria-label="Convert text to capitalized case">
+                        Capitalized Case
+                    </button>
+                    <button onclick="convertCase('toggle')" class="btn btn-main btn-primary" title="ALT+G"
+                        aria-label="Convert text to toogle case">
+                        toGGle Case
+                    </button>
+                    <button onclick="convertCase('alternative')" class="btn btn-main btn-primary" title="ALT+A"
+                        aria-label="Convert text to alternative case">
+                        Alternate Case
+                    </button>
+                    <button onclick="convertCase('pascal')" class="btn btn-main btn-primary" title="ALT+P"
+                        aria-label="Convert text to pascal case">
+                        Pascal Case
+                    </button>
+                    <button onclick="convertCase('camel')" class="btn btn-main btn-primary" title="ALT+M"
+                        aria-label="Convert text to camel case">
+                        caMel Case
+                    </button>
+                    <button onclick="convertCase('snake')" class="btn btn-main btn-primary" title="ALT+N"
+                        aria-label="Convert text to snake case">
+                        sNake Case
+                    </button>
+                    <button onclick="convertCase('kebab')" class="btn btn-main btn-primary" title="ALT+K"
+                        aria-label="Convert text to kebab case">
+                        Kebab Case
+                    </button>
                 </div>
+
             </div>
-        </div>
-    </section>
+            <section class="card">
+                <h2 class="card-title">How to Use Case Converter</h2>
+                <p>
+                    The Case Converter tool allows you to instantly transform text into different letter cases such as
+                    uppercase, lowercase, title case, camel case, snake case, and more. It is useful for writers,
+                    developers, and editors who need quick text formatting.
+                </p>
+                <div class="card-body">
+                    <ol class="tool-steps"
+                        style="color: var(--color-text-secondary); line-height: 1.8; padding-left: var(--space-lg);">
+                        <li>Enter or paste your text into the input box.</li>
+                        <li>Select the desired case conversion button.</li>
+                        <li>The converted text will appear instantly in the result box.</li>
+                        <li>Click the <strong>Copy</strong> button to copy the converted text.</li>
+                    </ol>
+                    <h3>Keyboard Shortcuts</h3>
+                    <p>You can also convert text using the following keyboard shortcuts:</p>
+                    <ul class="shortcut-list">
+                        <li><strong>ALT + U</strong> --> Convert to UPPERCASE</li>
+                        <li><strong>ALT + L</strong> --> Convert to lowercase</li>
+                        <li><strong>ALT + T</strong> --> Convert to Title Case</li>
+                        <li><strong>ALT + S</strong> --> Convert to Sentence case</li>
+                        <li><strong>ALT + C</strong> --> Convert to Capitalized Case</li>
+                        <li><strong>ALT + G</strong> --> Convert to Toggle</li>
+                        <li><strong>ALT + A</strong> --> Convert to Alternative</li>
+                        <li><strong>ALT + P</strong> --> Convert to Pascal</li>
+                        <li><strong>ALT + M</strong> --> Convert to caMel</li>
+                        <li><strong>ALT + N</strong> --> Convert to sNake</li>
+                        <li><strong>ALT + K</strong> --> Convert to Kebab</li>
+                    </ul>
+                    <hr>
+                    <h3>Case Converter Examples</h3>
+                    <p>
+                        <strong>Original Text:</strong>
+                        <br>
+                        Welcome to our amazing tool.
+                    </p>
+                    <ul class="examples">
+                        <li><strong>UPPERCASE:</strong><br>
+                            WELCOME TO OUR AMAZING TOOL.
+                        </li>
+
+                        <li><strong>lowercase:</strong><br>
+                            welcome to our amazing tool.
+                        </li>
+
+                        <li><strong>Title Case:</strong><br>
+                            Welcome To Our Amazing Tool.
+                        </li>
+                        <li><strong>Sentence case:</strong><br>
+                            Welcome to our amazing tool.
+                        </li>
+
+                        <li><strong>Capitalized Case:</strong><br>
+                            Welcome To Our Amazing Tool.
+                        </li>
+
+                        <li><strong>Toggle Case:</strong><br>
+                            wELCOME TO OUR AMAZING TOOL.
+                        </li>
+
+                        <li><strong>Alternate Case:</strong><br>
+                            WeLcOmE tO oUr AmAzInG tOoL.
+                        </li>
+                        <li><strong>Pascal Case:</strong><br>
+                            WelcomeToOurAmazingTool.
+                        </li>
+                        <li><strong>caMel Case:</strong><br>
+                            welcomeToOurAmazingTool.
+                        </li>
+                        <li><strong>sNake Case:</strong><br>
+                            welcome_to_our_amazing_tool.
+                        </li>
+                        <li><strong>Kebab Case:</strong><br>
+                            welcome-to-our-amazing-tool.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="card">
+                <h3 class="card-title">Related Text Tools</h3>
+                <div class="card-body">
+                    <ul class="related-tools">
+                        <li>
+                            <a href="tools/text-tools/find-replace.html" hreflang="en" target="_blank"
+                                aria-label="Open Find & Replace Tool" title="Find & Replace Tool">Find & Replace</a>
+                        </li>
+                        <li>
+                            <a href="tools/text-tools/slug-generator.html" hreflang="en" target="_blank"
+                                aria-label="Open Slug Generator Tool" title="Free Slug Generator Tool">Slug
+                                Generator</a>
+                        </li>
+                        <li>
+                            <a href="tools/text-tools/random-text-generator.html" hreflang="en" target="_blank"
+                                aria-label="Open Random Text Generator Tool"
+                                title="Plain text, HTML, Lorem Ipsum">Random Text Generator</a>
+                        </li>
+                        <li>
+                            <a href="tools/text-tools/text-calculator.html" hreflang="en" target="_blank"
+                                aria-label="Open Text Calculator Tool"
+                                title="Reading & Speaking Time, Average Word Length">Text Calculator</a>
+                        </li>
+                        <li>
+                            <a href="tools/text-tools/text-cleaner.html" hreflang="en" target="_blank"
+                                aria-label="Open Text Cleaner Tool"
+                                title="Remove Duplicate words, Punctuation, Special characters, Numbers, HTML tags, Emojis, Stop words & Fix spacing issues ">Text
+                                Cleaner</a>
+                        </li>
+                        <li>
+                            <a href="tools/text-tools/text-line-tools.html" hreflang="en" target="_blank"
+                                aria-label="Open Text Line Tool" title="">Line Break Remover</a>
+                        </li>
+                        <li>
+                            <a href="tools/text-tools/text-reverser.html" hreflang="en" target="_blank"
+                                aria-label="Open Text Reverser Tool" title="Free Text Reverse Tool">Text Reverser</a>
+                        </li>
+                        <li>
+                            <a href="tools/text-tools/text-shuffle.html" hreflang="en" target="_blank"
+                                aria-label="Open Text shuffle Tool" title="Free Text Shuffle Tool">Text shuffle</a>
+                        </li>
+                        <li>
+                            <a href="tools/text-tools/text-sorter.html" hreflang="en" target="_blank"
+                                aria-label="Open Text Sorter Tool" title="Free Text Sorter Tool">Text Sorter</a>
+                        </li>
+                        <li>
+                            <a href="tools/text-tools/whitespace-remover.html" hreflang="en" target="_blank"
+                                aria-label="Open Whitespace Remover Tool" title="Free Whitespace Remover">Whitespace
+                                Remover</a>
+                        </li>
+                        <li>
+                            <a href="tools/text-tools/word-counter.html" hreflang="en" target="_blank"
+                                aria-label="Open Word Counter Tool" title="Word Counter Tool">Word Counter</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="card">
+                <h2>Frequently Asked Questions</h2>
+
+                <h3>What is a case converter?</h3>
+                <p>A case converter is a tool that changes the capitalization format of text.</p>
+
+                <h3>Why use a case converter?</h3>
+                <p>It helps quickly format text for writing, coding, and documentation.</p>
+            </section>
+        </section>
+    </main>
     <!-- Category Popup Modal -->
     <div class="category-modal" id="categoryModal">
         <div class="category-modal-overlay" id="categoryOverlay"></div>
@@ -142,10 +336,10 @@
                 <button class="category-close" id="categoryClose">&times;</button>
             </div>
             <div class="category-modal-body grid grid-cols-2 gap-lg">
-                <a href="../../tools/text-tools/" class="category-popup-card">
+                <a href="tools/text-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
+                            aria-hidden="true" focusable="false">
                             <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
                             <polyline points="14 2 14 8 20 8" />
                             <line x1="8" y1="13" x2="16" y2="13" />
@@ -153,28 +347,28 @@
                         </svg></div>
                     <span>Text Tools</span>
                 </a>
-                <a href="../../tools/developer-tools/" class="category-popup-card">
+                <a href="tools/developer-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
+                            aria-hidden="true" focusable="false">
                             <polyline points="16 18 22 12 16 6" />
                             <polyline points="8 6 2 12 8 18" />
                         </svg></div>
                     <span>Developer Tools</span>
                 </a>
-                <a href="../../tools/security-tools/" class="category-popup-card">
+                <a href="tools/security-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
+                            aria-hidden="true" focusable="false">
                             <path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z" />
                             <path d="M9 12l2 2 4-4" />
                         </svg></div>
                     <span>Security</span>
                 </a>
-                <a href="../../tools/utility-tools/" class="category-popup-card">
+                <a href="tools/utility-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
+                            aria-hidden="true" focusable="false">
                             <path d="M14.7 6.3a4 4 0 0 0 5 5l-9 9-4-4 9-9z" />
                             <path d="M16 4l4 4" />
                         </svg></div>
@@ -185,7 +379,7 @@
     </div>
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <section class="container">
             <div class="footer-grid">
                 <div>
                     <h3 class="footer-section-title">abcroot</h3>
@@ -196,27 +390,27 @@
                 <div>
                     <h4 class="footer-section-title">Categories</h4>
                     <ul class="footer-links">
-                        <li><a href="../../text-tools.html" class="footer-link">Text & Writing Tools</a></li>
-                        <li><a href="../../developer-tools.html" class="footer-link">Developer Tools</a></li>
-                        <li><a href="../../security-tools.html" class="footer-link">Security & Privacy</a></li>
-                        <li><a href="../../utility-tools.html" class="footer-link">Random & Utility</a></li>
+                        <li><a href="text-tools.html" class="footer-link">Text & Writing Tools</a></li>
+                        <li><a href="developer-tools.html" class="footer-link">Developer Tools</a></li>
+                        <li><a href="security-tools.html" class="footer-link">Security & Privacy</a></li>
+                        <li><a href="utility-tools.html" class="footer-link">Random & Utility</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="footer-section-title">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="../../about.html" class="footer-link">About Us</a></li>
-                        <li><a href="../../contact.html" class="footer-link">Contact</a></li>
-                        <li><a href="../../sitemap.html" class="footer-link">Sitemap</a></li>
-                        <li><a href="../../changelog.html" class="footer-link">changelog</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="sitemap.html" class="footer-link">Sitemap</a></li>
+                        <li><a href="changelog.html" class="footer-link">changelog</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="footer-section-title">Legal</h4>
                     <ul class="footer-links">
-                        <li><a href="../../privacy.html" class="footer-link">Privacy Policy</a></li>
-                        <li><a href="../../terms.html" class="footer-link">Terms & Conditions</a></li>
-                        <li><a href="../../disclaimer.html" class="footer-link">Disclaimer</a></li>
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html" class="footer-link">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
@@ -224,21 +418,18 @@
                 <p>&copy; <span class="f-year"></span> abcroot. All rights reserved. Built with care for productivity.
                 </p>
             </div>
-        </div>
+        </section>
     </footer>
-    <script src="../../js/main.js" defer></script>
-    <script src="../../js/case-converter.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/case-converter.js" defer></script>
     <!-- FOR FOOTER YEAR UPDATE -->
-    <script src="../../js/main-j.js" defer></script>
+    <script src="js/main-j.js" defer></script>
     <!-- FOR MODEL OPEN -->
-    <script src="../../js/main-m.js" defer></script>
+    <script src="js/main-m.js" defer></script>
     <!-- FOR SEARCH BY INDEX -->
-    <script src="../../js/search-index.js" defer></script>
+    <script src="js/search-index.js" defer></script>
     <!-- COPY AND CLEAR -->
-    <script src="../../js/main-c.js" defer></script>
+    <script src="js/main-c.js" defer></script>
 </body>
 
 </html>
-
-
-
