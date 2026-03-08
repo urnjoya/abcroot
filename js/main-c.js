@@ -11,6 +11,10 @@ function copyResult() {
 function clearAll() {
     document.getElementById('input-text').value = '';
     document.getElementById('result').textContent = 'Your result will appear here...';
+    if (document.getElementById('input-text').value == '') {
+        showNotification('Clear Text !', 'success')
+        return
+    }
 }
 // ///
 function clearAllAmc() {
@@ -44,5 +48,3 @@ function clearAllEditorTrue() {
     document.getElementById("result").textContent = "Your result will appear here...";
 }
 // True End
-
-
