@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
+    <base href="../../">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,13 +33,13 @@
 
     <title>Developer Tools – Free Online Code Utilities | abcroot</title>
     <link rel="canonical" href="https://abcroot.xyz/tools/developer-tools/">
-    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
-    <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <script src="../../js/analytics.js"></script>
-    <link rel="preload" href="../../css/main.css" as="style">
-    <link rel="stylesheet" href="../../css/main.css">
+    <script src="js/analytics.js"></script>
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="stylesheet" href="css/main.css">
 
     <script type="application/ld+json">
 {
@@ -78,60 +79,55 @@
 
 <body>
     <!-- NAVIGATION -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container navbar-container">
-            <a href="../../" class="navbar-logo">abcroot</a>
-                        <div class="navbar-search">
-                                <div class="search-input">
-                                        <span class="search-icon">🔍</span>
-                                        <input type="text" id="searchInput" placeholder="Search tools..."
-                        autocomplete="off">
-                                        <div id="searchResults" class="search-results"></div>
-                                    </div>
-                            </div>
+            <a href="" class="navbar-logo" aria-label="abcroot homepage">abcroot</a>
             <div class="navbar-search">
                 <div class="search-input">
                     <span class="search-icon">🔍</span>
-                    <input type="text" id="search-input" placeholder="Search tools...">
+                    <input type="text" id="searchInput" placeholder="Search tools..." autocomplete="off"
+                        aria-label="Search tools">
+                    <div id="searchResults" class="search-results"></div>
                 </div>
             </div>
-
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <span class="mobile-menu-icon"></span>
             </button>
-
             <div class="navbar-menu">
                 <ul class="navbar-links">
-                    <li><a href="../../about.html" class="navbar-link">About</a></li>
-                    <li><a href="../../contact.html" class="navbar-link">Contact</a></li>
+                    <li><a href="about.html" class="navbar-link">About</a></li>
+                    <li><a href="contact.html" class="navbar-link">Contact</a></li>
                     <li class="navbar-link" id="categoryBtn">Category</li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- PAGE HEADER -->
-    <div class="page-header">
+    <header class="page-header">
         <div class="container">
-            <h1 class="page-title">Developer & Programming Tools</h1>
-            <p class="page-description">Essential development utilities for programmers. Format code, generate snippets,
-                validate syntax, and streamline your workflow.</p>
+            <h1 class="page-title" aria-label="Page title">Developer & Programming Tools</h1>
+            <p class="page-description" aria-label="Page description">
+                Free online developer tools for programmers and web developers.
+                Format code, encode or decode data, validate syntax, generate snippets,
+                and perform common programming tasks quickly and efficiently.
+            </p>
         </div>
-    </div>
+    </header>
 
     <!-- TOOLS GRID -->
     <section class="section">
-        <div class="container">
+        <section class="container">
             <div id="tool-list" class="tool-grid grid grid-cols-3">
                 <noscript>Please enable JavaScript to view popular tools.</noscript>
             </div>
-        </div>
+        </section>
     </section>
     <!-- RELATED CATEGORIES -->
     <section class="section bg-secondary">
-        <div class="container">
+        <section class="container">
             <h2 class="text-center mb-lg">Explore Other Categories</h2>
             <div class="grid grid-cols-3">
-                <a href="../../tools/text-tools/" class="card category-card">
+                <a href="tools/text-tools/" class="card category-card">
                     <div class="category-card-icon"><svg class="icon" width="48" height="48" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                             stroke-linejoin="round" aria-hidden="true">
@@ -141,10 +137,11 @@
                             <line x1="8" y1="17" x2="16" y2="17" />
                         </svg></div>
                     <h3 class="category-card-title">Text & Writing</h3>
-                    <p class="card-description">Word counters, case converters, and text generators.</p>
+                    <p class="card-description">Word counters, text analyzers, case converters, and other writing
+                        utilities.</p>
                 </a>
 
-                <a href="../../tools/security-tools/" class="card category-card">
+                <a href="tools/security-tools/" class="card category-card">
                     <div class="category-card-icon"><svg class="icon" width="48" height="48" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                             stroke-linejoin="round" aria-hidden="true">
@@ -152,10 +149,11 @@
                             <path d="M9 12l2 2 4-4" />
                         </svg></div>
                     <h3 class="category-card-title">Security & Privacy</h3>
-                    <p class="card-description">Password generators and encryption tools.</p>
+                    <p class="card-description">Password generators, hashing utilities, and privacy-focused security
+                        tools.</p>
                 </a>
 
-                <a href="../../tools/utility-tools/" class="card category-card">
+                <a href="tools/utility-tools/" class="card category-card">
                     <div class="category-card-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                             stroke-linejoin="round" aria-hidden="true">
@@ -163,10 +161,74 @@
                             <path d="M16 4l4 4" />
                         </svg></div>
                     <h3 class="category-card-title">Random & Utility</h3>
-                    <p class="card-description">Random generators and converters.</p>
+                    <p class="card-description">Random generators, converters, and everyday productivity tools.</p>
                 </a>
             </div>
+        </section>
+    </section>
+    <section class="section-sm">
+        <div class="container">
+            <p style="max-width:760px;margin:auto;text-align:center;">
+                Developer tools help programmers perform common coding tasks quickly
+                without installing additional software. These utilities can format code,
+                encode or decode data, validate syntax, generate snippets, and automate
+                small development tasks.
+
+                Online developer tools are useful for web developers, software engineers,
+                students learning programming, and technical professionals who need quick
+                solutions during development. All tools on abcroot run directly inside
+                your browser, ensuring fast performance and complete privacy.
+            </p>
         </div>
+    </section>
+    <section class="card">
+        <h2 class="card-title">About Developer & Programming Tools</h2>
+        <p class="card-body">
+            Developer tools are utilities designed to help programmers complete common development tasks more
+            efficiently. These tools can perform functions such as formatting code, encoding or decoding data,
+            validating syntax, generating snippets, and converting data formats.
+            Many developers rely on online tools when they need quick results without installing additional software.
+            Instead of writing scripts or installing plugins, these tools allow developers to process code and data
+            directly in their browser.
+            Developer utilities are commonly used in web development, software engineering, cybersecurity, and technical
+            learning environments. Students and professionals often use them for debugging, testing APIs, converting
+            data formats, or preparing code snippets for documentation.
+            The developer tools on abcroot are optimized for speed and simplicity. All processing happens directly in
+            your browser, which means your code and data remain private and are never uploaded to any server. This
+            approach ensures fast performance and secure usage for developers and technical users.
+        </p>
+    </section>
+    <section class="card">
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>What are developer tools?</h3>
+        <p>
+            Online developer tools are commonly used by web developers, software engineers, students learning
+            programming, and technical professionals who need quick solutions during development.
+        </p>
+        <h3>Who uses online developer tools?</h3>
+        <p>
+            Online developer tools are commonly used by web developers, software engineers, students learning
+            programming, and technical professionals who need quick solutions during development.
+        </p>
+        <h3>Why use online developer tools?</h3>
+        <p>
+            Online developer tools allow developers to perform tasks quickly without installing software or writing
+            additional scripts. They help save time and simplify development workflows.
+        </p>
+        <h3>Are online developer tools safe?</h3>
+        <p>
+            Most modern developer tools process data directly in the browser. This means your code and data remain
+            private and are not uploaded to external servers.
+        </p>
+        <h3>Do i need to install anything to use developer tools?</h3>
+        <p>
+            No. Online developer tools work directly in your web browser and require no installation.
+        </p>
+        <h3>Are developer tools on abcroot free?</h3>
+        <p>
+            Yes. All developer tools on abcroot are completely free to use with no sign-up or subscription required.
+        </p>
     </section>
     <!-- Category Popup Modal -->
     <div class="category-modal" id="categoryModal">
@@ -177,7 +239,7 @@
                 <button class="category-close" id="categoryClose">&times;</button>
             </div>
             <div class="category-modal-body grid grid-cols-2 gap-lg">
-                <a href="../../tools/text-tools/" class="category-popup-card">
+                <a href="tools/text-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -188,7 +250,7 @@
                         </svg></div>
                     <span>Text Tools</span>
                 </a>
-                <a href="../../tools/developer-tools/" class="category-popup-card">
+                <a href="tools/developer-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -197,7 +259,7 @@
                         </svg></div>
                     <span>Developer Tools</span>
                 </a>
-                <a href="../../tools/security-tools/" class="category-popup-card">
+                <a href="tools/security-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -206,7 +268,7 @@
                         </svg></div>
                     <span>Security</span>
                 </a>
-                <a href="../../tools/utility-tools/" class="category-popup-card">
+                <a href="tools/utility-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -220,7 +282,7 @@
     </div>
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
+        <section class="container">
             <div class="footer-grid">
                 <div>
                     <h3 class="footer-section-title">abcroot</h3>
@@ -232,29 +294,29 @@
                 <div>
                     <h4 class="footer-section-title">Categories</h4>
                     <ul class="footer-links">
-                        <li><a href="../../tools/text-tools/" class="footer-link">Text & Writing Tools</a></li>
-                        <li><a href="../../tools/developer-tools/" class="footer-link">Developer Tools</a></li>
-                        <li><a href="../../tools/security-tools/" class="footer-link">Security & Privacy</a></li>
-                        <li><a href="../../tools/utility-tools/" class="footer-link">Random & Utility</a></li>
+                        <li><a href="tools/text-tools/" class="footer-link">Text & Writing Tools</a></li>
+                        <li><a href="tools/developer-tools/" class="footer-link">Developer Tools</a></li>
+                        <li><a href="tools/security-tools/" class="footer-link">Security & Privacy</a></li>
+                        <li><a href="tools/utility-tools/" class="footer-link">Random & Utility</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="footer-section-title">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="../../about.html" class="footer-link">About Us</a></li>
-                        <li><a href="../../contact.html" class="footer-link">Contact</a></li>
-                        <li><a href="../../changelog.html" class="footer-link">Changelog</a></li>
-                        <li><a href="../../sitemap.html" class="footer-link">Sitemap</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="changelog.html" class="footer-link">Changelog</a></li>
+                        <li><a href="sitemap.html" class="footer-link">Sitemap</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="footer-section-title">Legal</h4>
                     <ul class="footer-links">
-                        <li><a href="../../privacy.html" class="footer-link">Privacy Policy</a></li>
-                        <li><a href="../../terms.html" class="footer-link">Terms & Conditions</a></li>
-                        <li><a href="../../disclaimer.html" class="footer-link">Disclaimer</a></li>
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html" class="footer-link">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
@@ -262,17 +324,17 @@
             <div class="footer-bottom">
                 <p>&copy; <span class="f-year"></span> abcroot. All rights reserved. Built with care for productivity.
             </div>
-        </div>
+        </section>
     </footer>
 
-    <script src="../../js/main.js" defer></script>
-    <script src="../../js/developer-tools.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/developer-tools.js" defer></script>
     <!-- FOR FOOTER YEAR UPDATE -->
-    <script src="../../js/main-j.js" defer></script>
+    <script src="js/main-j.js" defer></script>
     <!-- FOR MODEL OPEN -->
-    <script src="../../js/main-m.js" defer></script>
+    <script src="js/main-m.js" defer></script>
     <!-- FOR SEARCH BY INDEX -->
-    <script src="../../js/search-index.js" defer></script>
+    <script src="js/search-index.js" defer></script>
 </body>
 
 </html>
