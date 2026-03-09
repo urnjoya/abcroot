@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
+    <base href="../../">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,17 +32,19 @@
     <meta name="twitter:image" content="https://abcroot.xyz/assets/text-markdown-preview.png">
     <title>Text & Markdown Converter – Free Online Tool | abcroot</title>
     <link rel="canonical" href="https://abcroot.xyz/tools/developer-tools/text-markdown-converter.html">
-    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
-    <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <script src="../../js/analytics.js"></script>
-    <link rel="preload" href="../../css/main.css" as="style">
-    <link rel="preload" href="../../css/number-conversion.css" as="style">
-    <link rel="preload" href="../../css/rich-text-markdown.css" as="style">
-    <link rel="stylesheet" href="../../css/main.css">
-    <link rel="stylesheet" href="../../css/number-conversion.css">
-    <link rel="stylesheet" href="../../css/rich-text-markdown.css">
+    <script src="js/analytics.js"></script>
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="css/number-conversion.css" as="style">
+    <link rel="preload" href="css/rich-text-markdown.css" as="style">
+    <link rel="preload" href="css/main-a.css" as="style">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/number-conversion.css">
+    <link rel="stylesheet" href="css/rich-text-markdown.css">
+    <link rel="stylesheet" href="css/main-a.css">
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -66,87 +69,186 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container navbar-container">
-            <a href="../../" class="navbar-logo">abcroot</a>
-                        <div class="navbar-search">
-                                <div class="search-input">
-                                        <span class="search-icon">🔍</span>
-                                        <input type="text" id="searchInput" placeholder="Search tools..."
-                        autocomplete="off">
-                                        <div id="searchResults" class="search-results"></div>
-                                    </div>
-                            </div>
-            <button class="mobile-menu-toggle"><span class="mobile-menu-icon"></span></button>
+            <a href="" class="navbar-logo" aria-label="abcroot homepage">abcroot</a>
+            <div class="navbar-search">
+                <div class="search-input">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" placeholder="Search tools..." autocomplete="off"
+                        aria-label="Search tools">
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+            </div>
             <div class="navbar-menu">
                 <ul class="navbar-links">
-                    <li><a href="../../about.html" class="navbar-link">About</a></li>
-                    <li><a href="../../contact.html" class="navbar-link">Contact</a></li>
+                    <li><a href="about.html" class="navbar-link">About</a></li>
+                    <li><a href="contact.html" class="navbar-link">Contact</a></li>
                     <li class="navbar-link" id="categoryBtn">Category</li>
                 </ul>
             </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu"><span class="mobile-menu-icon"></span></button>
         </div>
     </nav>
-    <div class="page-header page-header-sm">
-        <h1 class="page-title">Rich Text Markdown</h1>
-    </div>
-
-    <section class="section-sm">
-        <div class="container">
-            <div class="tool-interface tool-main">
+    <header class="page-header page-header-sm">
+        <h1 class="page-title" aria-label="Page title">Rich Text Markdown</h1>
+    </header>
+    <main class="">
+        <section class="container">
+            <section class="tool-interface tool-main">
                 <div class="s1">
                     <div class="tool-interface ncop">
                         <div class="sele" id="fr">
                             <label for="base-from">From</label>
                             <select name="base-from" id="base-from">
-                                <option selected value=" ">--Select--</option>
+                                <option selected value=" " disabled>Select format</option>
                                 <option value="rich">Rich Text</option>
                                 <option value="markdown">Markdown</option>
                             </select>
                         </div>
                         <div class="sele" id="to">
-                            <label for="base-to">to</label>
+                            <label for="base-to">To</label>
                             <select name="base-to" id="base-to">
-                                <option selected value=" ">--Select--</option>
+                                <option selected value=" " disabled>Select format</option>
                                 <option value="rich">Rich Text</option>
                                 <option value="markdown">Markdown</option>
                             </select>
                         </div>
+                    </div>
+                    <div class="p1">
+                        <div class="form-group">
+                            <!-- data-placeholder="Example: **Bold text**, # Heading, or paste rich text here..." -->
+                            <div id="input-text" contenteditable="true" class="editor form-textarea"
+                                data-placeholder="Type or paste text here..." role="textbox" aria-multiline="true"
+                                aria-label="Text editor for text markdown converter"></div>
+                            <button onclick="clearAllEditorTrue()" class="clear-btn btn btn-secondary mt-lg"
+                                style="width: 100%;">
+                                <svg class="code-option__button-svg" width="17" height="17" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                    <g stroke="#ffffff" stroke-width="2" fill="none" fill-rule="evenodd"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <!-- Trash Bin Body -->
+                                        <path d="M3 6h18"></path>
+                                        <path
+                                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+                                        </path>
+                                        <!-- Vertical Lines -->
+                                        <line x1="10" y1="11" x2="10" y2="17"></line>
+                                        <line x1="14" y1="11" x2="14" y2="17"></line>
+                                    </g>
+                                </svg>
 
-                    </div>
-                    <div class="form-group">
-                        <div id="input-text" contenteditable="true" class="form-textarea editor"></div>
-                    </div>
-
-                    <div class="grid grid-cols-auto" style="gap: var(--space-sm);">
-                        <button onclick="perform()" class="btn btn-theme-a">Convert</button>
-                    </div>
-                </div>
-                <div class="s2">
-                    <div class="result-card">
-                        <div class="result-header">
-                            <span class="result-label">Result:</span>
-                            <button onclick="copyResultEditorTrue()" class="copy-btn" id="copy-btn">📋 Copy</button>
+                                Clear All
+                            </button>
                         </div>
-                        <div class="result-content" id="result">Your result will appear here...</div>
+                        <div class="result-card">
+                            <!-- Converted Markdown or rich text will appear here. -->
+                            <div class="result-content" id="result" role="status" aria-live="polite">Your result will appear here...</div>
+                            <button onclick="copyResultEditorTrue()" class="copy-btn" id="copy-btn">
+                                <svg class="code-option__button-svg" width="13" height="17"
+                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                    <g stroke="#ffffff" stroke-width="2" fill="none" fill-rule="evenodd">
+                                        <path d="M5 5h7v11H5z"></path>
+                                        <path d="M1 15V1h10"></path>
+                                    </g>
+                                </svg>
+                                Copy to Clipboard
+                            </button>
+                        </div>
                     </div>
-
-                    <button onclick="clearAllEditorTrue()" class="btn btn-secondary mt-lg" style="width: 100%;">Clear
-                        All</button>
+                    <div class="grid grid-cols-auto ans" style="gap: var(--space-sm);">
+                        <button onclick="perform()" class="btn btn-primary"
+                            aria-label="Convert rich text to markdown or markdown to rich text">Convert</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
+            </section>
+            <section class="card">
                 <h2 class="card-title">How to Use</h2>
+                <p class="tool-description">
+                    Convert rich text into Markdown format or transform Markdown back into formatted text instantly.
+                    This free online Markdown converter helps developers, writers, and content creators quickly
+                    switch between Markdown syntax and rich text formatting.
+                </p>
                 <div class="card-body">
                     <ol style="color: var(--color-text-secondary); line-height: 1.8; padding-left: var(--space-lg);">
-                        <li>Enter your text in the input field.</li>
-                        <li>Click to convert your text button.</li>
-                        <li>Copy the result using the copy button.</li>
+                        <li>Select the input format from the From dropdown (Rich Text or Markdown).</li>
+                        <li>Choose the output format in the To dropdown.</li>
+                        <li>Paste or type your content in the editor area.</li>
+                        <li>Click the Convert button to process the content.</li>
+                        <li>The converted Markdown or formatted text will appear in the result box.</li>
+                        <li>Click <strong>Copy to Clipboard</strong> to copy the result.</li>
                     </ol>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
+            <section class="card">
+                <h3 class="card-title">About Rich Text and Markdown Conversion</h3>
+                <p class="card-body">
+                    Markdown is a lightweight markup language designed to make writing and formatting content simple.
+                    Instead of using complex HTML tags, Markdown uses symbols like #, *, and - to create headings,
+                    lists, emphasis, and links.
+                    Many developers, bloggers, and documentation writers prefer Markdown because it is easy to read and
+                    write. Converting rich formatted text into Markdown allows users to quickly integrate content into
+                    documentation systems, static site generators, and developer tools.
+                    The abcroot Markdown converter processes all content directly in your browser, ensuring fast
+                    conversion while keeping your text private.
+                </p>
+                <h3 class="card-title">Common Uses</h3>
+                <p class="card-body">
+                    This Markdown converter is commonly used for:
+                <ul>
+                    <li>Converting formatted text into Markdown syntax</li>
+                    <li>Turning Markdown documents into readable formatted text</li>
+                    <li>Preparing content for GitHub or documentation platforms</li>
+                    <li>Formatting text for static site generators</li>
+                    <li>Cleaning rich text before publishing online</li>
+                    <li>Learning Markdown syntax quickly</li>
+                </ul>
+                </p>
+            </section>
+            <section class="card">
+                <h3 class="card-title">Related Text Tools</h3>
+                <div class="card-body">
+                    <ul class="related-tools">
+                        <li>
+                            <a href="tools/developer-tools/number-conversion.html" hreflang="en" target="_blank"
+                                aria-label="Open Text Markdown Converter Tool" title="Number Base Converter Tool">Number
+                                Base Converter</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="card">
+                <h2>Frequently Asked Questions</h2>
+
+                <h3>What is Markdown?</h3>
+                <p>
+                    Markdown is a lightweight markup language used to format text using simple syntax like # for
+                    headings and **bold** for emphasis.
+                </p>
+                <h3>Why convert rich text to Markdown?</h3>
+                <p>
+                    Many documentation systems and developer platforms use Markdown. Converting rich text to Markdown
+                    helps make content compatible with those systems.
+                </p>
+                <h3>What is rich text?</h3>
+                <p>
+                    Rich text refers to formatted text that includes styles such as bold, italic, headings, lists, and
+                    links, commonly created in editors like Word or Google Docs.
+                </p>
+                <h3>Can i convert Markdown back to formatted text</h3>
+                <p>
+                    Yes. This tool allows you to convert Markdown syntax into readable rich text formatting.
+                </p>
+                <h3>Is this Markdown converter free?</h3>
+                <p>
+                    Yes. The converter on abcroot is completely free and works directly in your browser.
+                </p>
+                <h3>Is my text stored or uploaded?</h3>
+                <p>No. All processing happens locally in your browser. Your text is not stored or transmitted to any
+                    server.</p>
+            </section>
+        </section>
+    </main>
     <!-- Category Popup Modal -->
     <div class="category-modal" id="categoryModal">
         <div class="category-modal-overlay" id="categoryOverlay"></div>
@@ -156,7 +258,7 @@
                 <button class="category-close" id="categoryClose">&times;</button>
             </div>
             <div class="category-modal-body grid grid-cols-2 gap-lg">
-                <a href="../../tools/text-tools/" class="category-popup-card">
+                <a href="tools/text-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -167,7 +269,7 @@
                         </svg></div>
                     <span>Text Tools</span>
                 </a>
-                <a href="../../tools/developer-tools/" class="category-popup-card">
+                <a href="tools/developer-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -176,7 +278,7 @@
                         </svg></div>
                     <span>Developer Tools</span>
                 </a>
-                <a href="../../tools/security-tools/" class="category-popup-card">
+                <a href="tools/security-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -185,7 +287,7 @@
                         </svg></div>
                     <span>Security</span>
                 </a>
-                <a href="../../tools/utility-tools/" class="category-popup-card">
+                <a href="tools/utility-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -198,7 +300,7 @@
         </div>
     </div>
     <footer class="footer">
-        <div class="container">
+        <section class="container">
             <div class="footer-grid">
                 <div>
                     <h3 class="footer-section-title">abcroot</h3>
@@ -209,47 +311,47 @@
                 <div>
                     <h4 class="footer-section-title">Categories</h4>
                     <ul class="footer-links">
-                        <li><a href="../../text-tools.html" class="footer-link">Text & Writing Tools</a></li>
-                        <li><a href="../../developer-tools.html" class="footer-link">Developer Tools</a></li>
-                        <li><a href="../../security-tools.html" class="footer-link">Security & Privacy</a></li>
-                        <li><a href="../../utility-tools.html" class="footer-link">Random & Utility</a></li>
+                        <li><a href="text-tools.html" class="footer-link">Text & Writing Tools</a></li>
+                        <li><a href="developer-tools.html" class="footer-link">Developer Tools</a></li>
+                        <li><a href="security-tools.html" class="footer-link">Security & Privacy</a></li>
+                        <li><a href="utility-tools.html" class="footer-link">Random & Utility</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="footer-section-title">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="../../about.html" class="footer-link">About Us</a></li>
-                        <li><a href="../../contact.html" class="footer-link">Contact</a></li>
-                        <li><a href="../../changelog.html" class="footer-link">Changelog</a></li>
-                        <li><a href="../../sitemap.html" class="footer-link">Sitemap</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="changelog.html" class="footer-link">Changelog</a></li>
+                        <li><a href="sitemap.html" class="footer-link">Sitemap</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="footer-section-title">Legal</h4>
                     <ul class="footer-links">
-                        <li><a href="../../privacy.html" class="footer-link">Privacy Policy</a></li>
-                        <li><a href="../../terms.html" class="footer-link">Terms & Conditions</a></li>
-                        <li><a href="../../disclaimer.html" class="footer-link">Disclaimer</a></li>
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html" class="footer-link">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; <span class="f-year"></span> abcroot. All rights reserved. Built with care for productivity.
             </div>
-        </div>
+        </section>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/turndown/dist/turndown.js" defer></script>
-    <script src="../../js/main.js" defer></script>
-    <script src="../../js/rich-text-markdown.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/rich-text-markdown.js" defer></script>
     <!-- FOR FOOTER YEAR UPDATE -->
-    <script src="../../js/main-j.js" defer></script>
+    <script src="js/main-j.js" defer></script>
     <!-- FOR MODEL OPEN -->
-    <script src="../../js/main-m.js" defer></script>
+    <script src="js/main-m.js" defer></script>
     <!-- FOR SEARCH BY INDEX -->
-    <script src="../../js/search-index.js" defer></script>
+    <script src="js/search-index.js" defer></script>
     <!-- COPY AND CLEAR -->
-    <script src="../../js/main-c.js" defer></script>
+    <script src="js/main-c.js" defer></script>
 </body>
 
 </html>
