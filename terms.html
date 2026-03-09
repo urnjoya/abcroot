@@ -165,7 +165,23 @@
                         <p>You use our tools at your own risk. Always verify critical results independently.</p>
                     </div>
                 </section>
+                <section class="card">
+                    <h2 class="card-title">Analytics Services</h2>
+                    <div class="card-body">
+                        <p>We may use third-party analytics services to understand how visitors interact with our
+                            website and to improve our services.</p>
 
+                        <ul style="color: var(--color-text-secondary); line-height: 1.8; margin-left: var(--space-lg);">
+                            <li><strong>Google Analytics</strong> – used to analyze website traffic and user
+                                interactions.</li>
+                            <li><strong>Microsoft Clarity</strong> – used for heatmaps and session recordings to improve
+                                usability.</li>
+                        </ul>
+
+                        <p>These services may collect anonymized information such as device type, browser, pages
+                            visited, and interaction data.</p>
+                    </div>
+                </section>
                 <section class="card">
                     <h2 class="card-title">Third-Party Links</h2>
                     <div class="card-body">
@@ -187,7 +203,13 @@
                         <p>Continued use of abcroot after changes constitutes acceptance of the modified terms.</p>
                     </div>
                 </section>
-
+                <section class="card">
+                    <h2 class="card-title">User Responsibilities</h2>
+                    <div class="card-body">
+                        <p>You are responsible for how you use the tools available on abcroot. You agree not to misuse
+                            the platform or rely solely on automated tool outputs for critical decisions.</p>
+                    </div>
+                </section>
                 <section class="card">
                     <h2 class="card-title">Indemnification</h2>
                     <div class="card-body">
@@ -201,9 +223,9 @@
                 <section class="card">
                     <h2 class="card-title">Governing Law</h2>
                     <div class="card-body">
-                        <p>These Terms and Conditions are governed by applicable laws. Any disputes shall be resolved in
-                            accordance
-                            with local jurisdiction.</p>
+                        <p>These Terms and Conditions shall be governed and interpreted in accordance with applicable
+                            laws. Any disputes arising from the use of this website shall be resolved under the
+                            appropriate jurisdiction.</p>
                     </div>
                 </section>
 
@@ -222,51 +244,50 @@
     <div class="category-modal" id="categoryModal">
         <div class="category-modal-overlay" id="categoryOverlay"></div>
         <div class="category-modal-content">
-            <div class="category-modal-header">
-                <h3>Select Category</h3>
-                <button class="category-close" id="categoryClose">&times;</button>
-            </div>
-            <div class="category-modal-body grid grid-cols-2 gap-lg">
-                <a href="tools/text-tools/" class="category-popup-card">
-                    <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
-                            <polyline points="14 2 14 8 20 8" />
-                            <line x1="8" y1="13" x2="16" y2="13" />
-                            <line x1="8" y1="17" x2="16" y2="17" />
-                        </svg></div>
-                    <span>Text Tools</span>
-                </a>
-                <a href="tools/developer-tools/" class="category-popup-card">
-                    <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <polyline points="16 18 22 12 16 6" />
-                            <polyline points="8 6 2 12 8 18" />
-                        </svg></div>
-                    <span>Developer Tools</span>
-                </a>
-                <a href="tools/security-tools/" class="category-popup-card">
-                    <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z" />
-                            <path d="M9 12l2 2 4-4" />
-                        </svg></div>
-                    <span>Security</span>
-                </a>
-                <a href="tools/utility-tools/" class="category-popup-card">
-                    <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
-                            <path d="M14.7 6.3a4 4 0 0 0 5 5l-9 9-4-4 9-9z" />
-                            <path d="M16 4l4 4" />
-                        </svg></div>
-                    <span>Utility</span>
-                </a>
-            </div>
+            <h3>Select Category</h3>
+            <button class="category-close" id="categoryClose">&times;</button>
         </div>
+        <div class="category-modal-body grid grid-cols-2 gap-lg">
+            <a href="tools/text-tools/" class="category-popup-card">
+                <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
+                        <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="8" y1="13" x2="16" y2="13" />
+                        <line x1="8" y1="17" x2="16" y2="17" />
+                    </svg></div>
+                <span>Text Tools</span>
+            </a>
+            <a href="tools/developer-tools/" class="category-popup-card">
+                <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                    </svg></div>
+                <span>Developer Tools</span>
+            </a>
+            <a href="tools/security-tools/" class="category-popup-card">
+                <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
+                        <path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z" />
+                        <path d="M9 12l2 2 4-4" />
+                    </svg></div>
+                <span>Security</span>
+            </a>
+            <a href="tools/utility-tools/" class="category-popup-card">
+                <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                        aria-hidden="true">
+                        <path d="M14.7 6.3a4 4 0 0 0 5 5l-9 9-4-4 9-9z" />
+                        <path d="M16 4l4 4" />
+                    </svg></div>
+                <span>Utility</span>
+            </a>
+        </div>
+    </div>
     </div>
     <footer class="footer">
         <section class="container">
@@ -318,4 +339,5 @@
     <!-- FOR SEARCH BY INDEX -->
     <script src="js/search-index.js" defer></script>
 </body>
+
 </html>
