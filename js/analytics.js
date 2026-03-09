@@ -5,6 +5,7 @@ function loadScript(src, async = true) {
     s.src = src;
     s.async = async;
     document.head.appendChild(s);
+    console.log("google tag successfully loading using ", src);
 }
 loadScript("https://www.googletagmanager.com/gtag/js?id=G-44K47CQEKZ")
 
@@ -20,3 +21,4 @@ gtag('config', 'G-44K47CQEKZ');
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "vqy58i0lc9");
+console.log("Clarity successfully loading");
