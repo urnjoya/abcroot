@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
+    <base href="../../">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,13 +33,13 @@
 
     <title>Free Online Utility Tools – Converters, Generators & More | abcroot</title>
     <link rel="canonical" href="https://abcroot.xyz/tools/utility-tools/">
-    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
-    <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <script src="../../js/analytics.js"></script>
-    <link rel="preload" href="../../css/main.css" as="style">
-    <link rel="stylesheet" href="../../css/main.css">
+    <script src="js/analytics.js"></script>
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -75,43 +76,42 @@
 
 <body>
     <!-- NAVIGATION -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container navbar-container">
-            <a href="../../" class="navbar-logo">abcroot</a>
-                        <div class="navbar-search">
-                                <div class="search-input">
-                                        <span class="search-icon">🔍</span>
-                                        <input type="text" id="searchInput" placeholder="Search tools..."
-                        autocomplete="off">
-                                        <div id="searchResults" class="search-results"></div>
-                                    </div>
-                            </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span class="mobile-menu-icon"></span>
+            <a href="" class="navbar-logo" title="abcroot" aria-label="abcroot homepage">abcroot</a>
+            <div class="navbar-search">
+                <div class="search-input">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" placeholder="Search tools..." autocomplete="off"
+                        aria-label="Search tools">
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu"> <span class="mobile-menu-icon"></span>
             </button>
-
             <div class="navbar-menu">
                 <ul class="navbar-links">
-                    <li><a href="../../about.html" class="navbar-link">About</a></li>
-                    <li><a href="../../contact.html" class="navbar-link">Contact</a></li>
+                    <li><a href="about.html" class="navbar-link">About</a></li>
+                    <li><a href="contact.html" class="navbar-link">Contact</a></li>
                     <li class="navbar-link" id="categoryBtn">Category</li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- PAGE HEADER -->
-    <div class="page-header">
-        <div class="container">
-            <h1 class="page-title">Random & Utility Tools</h1>
-            <p class="page-description">Practical utilities for everyday tasks. Generate random data, convert units,
-                create QR
-                codes, and more.</p>
-        </div>
-    </div>
+    <header class="page-header">
+        <h1 class="page-title">Online Random & Utility Tools</h1>
+        <p class="page-description">
+            Free online utility tools for everyday tasks. Generate random data,
+            create QR codes, convert units, and use practical utilities that
+            simplify daily digital tasks directly in your browser.
+        </p>
+    </header>
 
     <!-- TOOLS GRID -->
     <section class="section">
         <div class="container">
+            <h2 class="text-center mb-lg">Available Utility Tools</h2>
             <div id="tool-list" class="tool-grid grid grid-cols-3">
                 <noscript>Please enable JavaScript to view tools.</noscript>
             </div>
@@ -122,7 +122,7 @@
         <div class="container">
             <h2 class="text-center mb-lg">Explore Other Categories</h2>
             <div class="grid grid-cols-3">
-                <a href="../../tools/text-tools/" class="card category-card">
+                <a href="tools/text-tools/" class="card category-card" aria-label="Browse text and writing tools">
                     <div class="category-card-icon"><svg class="icon" width="48" height="48" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                             stroke-linejoin="round" aria-hidden="true">
@@ -130,34 +130,128 @@
                             <polyline points="14 2 14 8 20 8" />
                             <line x1="8" y1="13" x2="16" y2="13" />
                             <line x1="8" y1="17" x2="16" y2="17" />
-                        </svg></div>
+                        </svg>
+                    </div>
                     <h3 class="category-card-title">Text & Writing</h3>
                     <p class="card-description">Word counters, case converters, and text generators.</p>
                 </a>
 
-                <a href="../../tools/developer-tools/" class="card category-card">
+                <a href="tools/developer-tools/" class="card category-card" aria-label="Browse developer tools">
                     <div class="category-card-icon"><svg class="icon" width="48" height="48" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                             stroke-linejoin="round" aria-hidden="true">
                             <polyline points="16 18 22 12 16 6" />
                             <polyline points="8 6 2 12 8 18" />
-                        </svg></div>
+                        </svg>
+                    </div>
                     <h3 class="category-card-title">Developer Tools</h3>
                     <p class="card-description">Code formatters, generators, and validators.</p>
                 </a>
 
-                <a href="../../tools/security-tools/" class="card category-card">
+                <a href="tools/security-tools/" class="card category-card" aria-label="Browse security & privacy tools">
                     <div class="category-card-icon"><svg class="icon" width="48" height="48" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                             stroke-linejoin="round" aria-hidden="true">
                             <path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z" />
                             <path d="M9 12l2 2 4-4" />
                         </svg>
-                        <h3 class="category-card-title">Security & Privacy</h3>
-                        <p class="card-description">Password generators and encryption tools.</p>
+                    </div>
+
+                    <h3 class="category-card-title">Security & Privacy</h3>
+                    <p class="card-description">Password generators and encryption tools.</p>
                 </a>
             </div>
         </div>
+    </section>
+    <section class="card">
+
+        <h2 class="card-title">About Random & Utility Tools</h2>
+
+        <p class="card-body">
+            Utility tools are practical digital tools designed to help users
+            perform small everyday tasks quickly and efficiently. These tools
+            can generate random data, convert units, create QR codes, and
+            perform various helpful operations that simplify common digital
+            activities.
+        </p>
+
+        <p class="card-body">
+            Online utility tools are useful for developers, students,
+            professionals, and everyday internet users. Instead of installing
+            software or searching for complicated solutions, users can complete
+            tasks instantly using browser-based utilities.
+        </p>
+
+        <p class="card-body">
+            Random generators, converters, and productivity utilities are
+            commonly used for testing applications, generating example data,
+            creating shareable codes, and performing simple calculations.
+        </p>
+
+        <p class="card-body">
+            The utility tools available on abcroot are designed for speed,
+            simplicity, and privacy. All processing happens locally inside
+            your browser, which ensures fast performance and keeps your data
+            secure.
+        </p>
+
+    </section>
+    <section class="card">
+
+        <h2 class="card-title">Common Uses of Utility Tools</h2>
+
+        <ul class="card-body">
+            <li>Generating random numbers or random strings</li>
+            <li>Creating QR codes for links or contact information</li>
+            <li>Converting units such as length, weight, or temperature</li>
+            <li>Generating example data for testing applications</li>
+            <li>Performing quick conversions and calculations</li>
+            <li>Creating shareable codes and digital assets</li>
+        </ul>
+
+    </section>
+    <section class="card">
+        <h2 class="card-title">Frequently Asked Questions</h2>
+        <h3>What are utility tools?</h3>
+        <p>
+            Utility tools are simple digital tools designed to perform
+            specific tasks quickly, such as generating random data,
+            converting units, or creating QR codes.
+        </p>
+
+        <h3>What are random generator tools?</h3>
+        <p>
+            Random generator tools create random numbers, strings,
+            or other data values that can be used for testing,
+            examples, or general use.
+        </p>
+
+        <h3>Who uses online utility tools?</h3>
+        <p>
+            Online utility tools are used by developers, students,
+            designers, professionals, and everyday users who need
+            quick solutions for small tasks.
+        </p>
+
+        <h3>Do I need to install software?</h3>
+        <p>
+            No. All utility tools on abcroot work directly inside
+            your web browser and require no installation.
+        </p>
+
+        <h3>Are online utility tools safe?</h3>
+        <p>
+            Many modern utility tools process data locally in the
+            browser, meaning the information is not uploaded to
+            external servers.
+        </p>
+
+        <h3>Are the tools on abcroot free?</h3>
+        <p>
+            Yes. All tools available on abcroot are completely free
+            to use and do not require registration.
+        </p>
+
     </section>
     <!-- Category Popup Modal -->
     <div class="category-modal" id="categoryModal">
@@ -168,10 +262,10 @@
                 <button class="category-close" id="categoryClose">&times;</button>
             </div>
             <div class="category-modal-body grid grid-cols-2 gap-lg">
-                <a href="../../tools/text-tools/" class="category-popup-card">
+                <a href="tools/text-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
+                            aria-hidden="true" focusable="false">
                             <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
                             <polyline points="14 2 14 8 20 8" />
                             <line x1="8" y1="13" x2="16" y2="13" />
@@ -179,28 +273,28 @@
                         </svg></div>
                     <span>Text Tools</span>
                 </a>
-                <a href="../../tools/developer-tools/" class="category-popup-card">
+                <a href="tools/developer-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
+                            aria-hidden="true" focusable="false">
                             <polyline points="16 18 22 12 16 6" />
                             <polyline points="8 6 2 12 8 18" />
                         </svg></div>
                     <span>Developer Tools</span>
                 </a>
-                <a href="../../tools/security-tools/" class="category-popup-card">
+                <a href="tools/security-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
+                            aria-hidden="true" focusable="false">
                             <path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z" />
                             <path d="M9 12l2 2 4-4" />
                         </svg></div>
                     <span>Security</span>
                 </a>
-                <a href="../../tools/utility-tools/" class="category-popup-card">
+                <a href="tools/utility-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
+                            aria-hidden="true" focusable="false">
                             <path d="M14.7 6.3a4 4 0 0 0 5 5l-9 9-4-4 9-9z" />
                             <path d="M16 4l4 4" />
                         </svg></div>
@@ -211,7 +305,7 @@
     </div>
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
+        <section class="container">
             <div class="footer-grid">
                 <div>
                     <h3 class="footer-section-title">abcroot</h3>
@@ -219,50 +313,47 @@
                         Professional online tools for everyone. Fast, free, and privacy-focused.
                     </p>
                 </div>
-
                 <div>
                     <h4 class="footer-section-title">Categories</h4>
                     <ul class="footer-links">
-                        <li><a href="../../tools/text-tools/" class="footer-link">Text & Writing Tools</a></li>
-                        <li><a href="../../tools/developer-tools/" class="footer-link">Developer Tools</a></li>
-                        <li><a href="../../tools/security-tools/" class="footer-link">Security & Privacy</a></li>
-                        <li><a href="../../tools/utility-tools/" class="footer-link">Random & Utility</a></li>
+                        <li><a href="text-tools.html" class="footer-link">Text & Writing Tools</a></li>
+                        <li><a href="developer-tools.html" class="footer-link">Developer Tools</a></li>
+                        <li><a href="security-tools.html" class="footer-link">Security & Privacy</a></li>
+                        <li><a href="utility-tools.html" class="footer-link">Random & Utility</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="footer-section-title">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="../../about.html" class="footer-link">About Us</a></li>
-                        <li><a href="../../contact.html" class="footer-link">Contact</a></li>
-                        <li><a href="../../changelog.html" class="footer-link">Changelog</a></li>
-                        <li><a href="../../sitemap.html" class="footer-link">Sitemap</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="sitemap.html" class="footer-link">Sitemap</a></li>
+                        <li><a href="changelog.html" class="footer-link">changelog</a></li>
                     </ul>
                 </div>
-
                 <div>
                     <h4 class="footer-section-title">Legal</h4>
                     <ul class="footer-links">
-                        <li><a href="../../privacy.html" class="footer-link">Privacy Policy</a></li>
-                        <li><a href="../../terms.html" class="footer-link">Terms & Conditions</a></li>
-                        <li><a href="../../disclaimer.html" class="footer-link">Disclaimer</a></li>
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html" class="footer-link">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; <span class="f-year"></span> abcroot. All rights reserved. Built with care for productivity.
             </div>
+        </section>
     </footer>
 
-    <script src="../../js/main.js" defer></script>
-    <script src="../../js/utility-tools.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/utility-tools.js" defer></script>
     <!-- FOR FOOTER YEAR UPDATE -->
-    <script src="../../js/main-j.js" defer></script>
+    <script src="js/main-j.js" defer></script>
     <!-- FOR MODEL OPEN -->
-    <script src="../../js/main-m.js" defer></script>
+    <script src="js/main-m.js" defer></script>
     <!-- FOR SEARCH BY INDEX -->
-    <script src="../../js/search-index.js" defer></script>
+    <script src="js/search-index.js" defer></script>
 </body>
 
 </html>
