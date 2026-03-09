@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
+    <base href="../../">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,15 +33,15 @@
 
     <title>Random Color Generator – Free Online Tool | abcroot</title>
     <link rel="canonical" href="https://abcroot.xyz/tools/utility-tools/random-color-generator.html">
-    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
-    <link rel="apple-touch-icon" href="../../assets/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <script src="../../js/analytics.js"></script>
-    <link rel="preload" href="../../css/main.css" as="style">
-    <link rel="preload" href="../../css/random-color-generator.css" as="style">
-    <link rel="stylesheet" href="../../css/main.css">
-    <link rel="stylesheet" href="../../css/random-color-generator.css">
+    <script src="js/analytics.js"></script>
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="css/random-color-generator.css" as="style">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/random-color-generator.css">
 
     <!-- JSON-LD structured data -->
     <script type="application/ld+json">
@@ -67,61 +68,149 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container navbar-container">
-            <a href="../../" class="navbar-logo">abcroot</a>
-                        <div class="navbar-search">
-                                <div class="search-input">
-                                        <span class="search-icon">🔍</span>
-                                        <input type="text" id="searchInput" placeholder="Search tools..."
-                        autocomplete="off">
-                                        <div id="searchResults" class="search-results"></div>
-                                    </div>
-                            </div>
+            <a href="" class="navbar-logo" aria-label="abcroot homepage">abcroot</a>
+            <div class="navbar-search">
+                <div class="search-input">
+                    <span class="search-icon">🔍</span>
+                    <input type="search" id="searchInput" placeholder="Search tools..." autocomplete="off"
+                        aria-label="Search tools">
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+            </div>
             <div class="navbar-menu">
                 <ul class="navbar-links">
-                    <li><a href="../../about.html" class="navbar-link">About</a></li>
-                    <li><a href="../../contact.html" class="navbar-link">Contact</a></li>
+                    <li><a href="about.html" class="navbar-link">About</a></li>
+                    <li><a href="contact.html" class="navbar-link">Contact</a></li>
                     <li class="navbar-link" id="categoryBtn">Category</li>
                 </ul>
             </div>
-            <button class="mobile-menu-toggle"><span class="mobile-menu-icon"></span></button>
+            <button class="mobile-menu-toggle" aria-label="humburgur"><span class="mobile-menu-icon"></span></button>
         </div>
     </nav>
-    <div class="page-header page-header-sm">
-        <h1 class="page-title">Random Color Generator</h1>
-    </div>
-
-    <section class="section-sm">
-        <div class="container">
+    <header class="page-header page-header-sm">
+        <h1 class="page-title" aria-label="Page title">Random Color Generator</h1>
+    </header>
+    <main class="section-sm">
+        <section class="container">
             <div class="tool-interface tool-main">
                 <!-- Generator Section -->
                 <div class="pg-1">
                     <div class="form-group">
-                        <label for="length">Number of Colors</label>
-                        <input type="number" class="lt" name="length" id="length" min="8" max="64" value="8" required>
+                        <label for="length">Number of Colors to Generate</label>
+                        <input type="number" class="lt" name="length" id="length" min="1" max="25" value="5" required>
                     </div>
                     <div>
-                        <button onclick="generate()" class="btn btn-theme-a">Generate Color</button>
+                        <button onclick="generate()" class="btn btn-primary"
+                            aria-label="Generate random color palette">Generate
+                            Color</button>
                     </div>
                 </div>
                 <!-- Result Section -->
                 <div class="pg-2">
-                    <div id="result"></div>
+                    <div id="result" role="status" aria-live="polite"></div>
                 </div>
             </div>
-            <div class="card no-select">
-                <h2 class="card-title">How to Use</h2>
+            <section class="card no-select">
+                <h2 class="card-title">How to Use the Random Color Generator</h2>
+
                 <div class="card-body">
-                    <ol style="color: var(--color-text-secondary); line-height: 1.8; padding-left: var(--space-lg);">
-                        <li>Enter target number</li>
-                        <li>Click to generate button.</li>
-                        <li style="display: none;">Copy the result using the copy button.</li>
+
+                    <ol>
+                        <li>Enter the number of colors you want to generate.</li>
+                        <li>Click the <strong>Generate Color</strong> button.</li>
+                        <li>The tool will create random color swatches with HEX color codes.</li>
+                        <li>Use the generated colors in your design or development project.</li>
                     </ol>
+
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
+            <section class="card">
+
+                <h2>Common Uses of a Random Color Generator</h2>
+
+                <ul>
+                    <li>Creating color palettes for website design</li>
+                    <li>Generating HEX colors for CSS and front-end development</li>
+                    <li>Finding inspiration for graphic design projects</li>
+                    <li>Testing color combinations for user interfaces</li>
+                    <li>Generating placeholder colors for prototypes</li>
+                    <li>Experimenting with creative color schemes</li>
+                </ul>
+
+            </section>
+            <section class="card">
+
+                <h2>About Random Color Generators</h2>
+
+                <p>
+                    A random color generator is a design tool that creates random color
+                    values automatically. These tools are commonly used by designers,
+                    developers, and digital artists who need quick color inspiration
+                    or sample palettes.
+                </p>
+
+                <p>
+                    Random color generators typically produce colors in HEX format,
+                    which is widely used in web design and front-end development.
+                    These HEX color codes can be used in CSS, graphic design software,
+                    or UI design tools.
+                </p>
+
+                <p>
+                    Generating random color palettes can help spark creativity,
+                    improve design experimentation, and quickly create visually
+                    appealing color combinations.
+                </p>
+
+            </section>
+            <section class="card">
+
+                <h2>Frequently Asked Questions</h2>
+
+                <h3>What is a random color generator?</h3>
+                <p>
+                    A random color generator is a tool that automatically creates
+                    random color values, usually in HEX or RGB format, for design
+                    and development projects.
+                </p>
+
+                <h3>What is a HEX color code?</h3>
+                <p>
+                    A HEX color code is a six-digit hexadecimal value used in web
+                    design to represent colors. For example, #FF5733 represents a
+                    specific shade of orange.
+                </p>
+
+                <h3>Who uses random color generators?</h3>
+                <p>
+                    Random color generators are commonly used by web designers,
+                    graphic designers, developers, and digital artists.
+                </p>
+
+                <h3>Can I use generated colors in CSS?</h3>
+                <p>
+                    Yes. The generated HEX color codes can be directly used in CSS
+                    stylesheets, HTML design, and front-end development.
+                </p>
+
+                <h3>Why use a random color generator?</h3>
+                <p>
+                    Random color generators help designers quickly discover new
+                    color combinations and creative palettes without manually
+                    choosing each color.
+                </p>
+
+                <h3>Is this random color generator free?</h3>
+                <p>
+                    Yes. The tool is completely free and runs directly in your
+                    browser without requiring any installation.
+                </p>
+
+            </section>
+        </section>
+    </main>
     <!-- Category Popup Modal -->
     <div class="category-modal" id="categoryModal">
         <div class="category-modal-overlay" id="categoryOverlay"></div>
@@ -131,10 +220,10 @@
                 <button class="category-close" id="categoryClose">&times;</button>
             </div>
             <div class="category-modal-body grid grid-cols-2 gap-lg">
-                <a href="../../tools/text-tools/" class="category-popup-card">
+                <a href="tools/text-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
+                            aria-hidden="true" focusable="false">
                             <path d="M6 2h9l5 5v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" />
                             <polyline points="14 2 14 8 20 8" />
                             <line x1="8" y1="13" x2="16" y2="13" />
@@ -142,28 +231,28 @@
                         </svg></div>
                     <span>Text Tools</span>
                 </a>
-                <a href="../../tools/developer-tools/" class="category-popup-card">
+                <a href="tools/developer-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
+                            aria-hidden="true" focusable="false">
                             <polyline points="16 18 22 12 16 6" />
                             <polyline points="8 6 2 12 8 18" />
                         </svg></div>
                     <span>Developer Tools</span>
                 </a>
-                <a href="../../tools/security-tools/" class="category-popup-card">
+                <a href="tools/security-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
+                            aria-hidden="true" focusable="false">
                             <path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z" />
                             <path d="M9 12l2 2 4-4" />
                         </svg></div>
                     <span>Security</span>
                 </a>
-                <a href="../../tools/utility-tools/" class="category-popup-card">
+                <a href="tools/utility-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-                            aria-hidden="true">
+                            aria-hidden="true" focusable="false">
                             <path d="M14.7 6.3a4 4 0 0 0 5 5l-9 9-4-4 9-9z" />
                             <path d="M16 4l4 4" />
                         </svg></div>
@@ -172,8 +261,9 @@
             </div>
         </div>
     </div>
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
+        <section class="container">
             <div class="footer-grid">
                 <div>
                     <h3 class="footer-section-title">abcroot</h3>
@@ -184,43 +274,44 @@
                 <div>
                     <h4 class="footer-section-title">Categories</h4>
                     <ul class="footer-links">
-                        <li><a href="../../text-tools.html" class="footer-link">Text & Writing Tools</a></li>
-                        <li><a href="../../developer-tools.html" class="footer-link">Developer Tools</a></li>
-                        <li><a href="../../security-tools.html" class="footer-link">Security & Privacy</a></li>
-                        <li><a href="../../utility-tools.html" class="footer-link">Random & Utility</a></li>
+                        <li><a href="text-tools.html" class="footer-link">Text & Writing Tools</a></li>
+                        <li><a href="developer-tools.html" class="footer-link">Developer Tools</a></li>
+                        <li><a href="security-tools.html" class="footer-link">Security & Privacy</a></li>
+                        <li><a href="utility-tools.html" class="footer-link">Random & Utility</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="footer-section-title">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="../../about.html" class="footer-link">About Us</a></li>
-                        <li><a href="../../contact.html" class="footer-link">Contact</a></li>
-                        <li><a href="../../changelog.html" class="footer-link">Changelog</a></li>
-                        <li><a href="../../sitemap.html" class="footer-link">Sitemap</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="sitemap.html" class="footer-link">Sitemap</a></li>
+                        <li><a href="changelog.html" class="footer-link">changelog</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="footer-section-title">Legal</h4>
                     <ul class="footer-links">
-                        <li><a href="../../privacy.html" class="footer-link">Privacy Policy</a></li>
-                        <li><a href="../../terms.html" class="footer-link">Terms & Conditions</a></li>
-                        <li><a href="../../disclaimer.html" class="footer-link">Disclaimer</a></li>
+                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="disclaimer.html" class="footer-link">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; <span class="f-year"></span> abcroot. All rights reserved. Built with care for productivity.
+                </p>
             </div>
-        </div>
+        </section>
     </footer>
-    <script src="../../js/main.js" defer></script>
+    <script src="js/main.js" defer></script>
     <!-- FOR FOOTER YEAR UPDATE -->
-    <script src="../../js/main-j.js" defer></script>
+    <script src="js/main-j.js" defer></script>
     <!-- FOR MODEL OPEN -->
-    <script src="../../js/main-m.js" defer></script>
+    <script src="js/main-m.js" defer></script>
     <!-- FOR SEARCH BY INDEX -->
-    <script src="../../js/search-index.js" defer></script>
-    <script src="../../js/random-color-generator.js" defer></script>
+    <script src="js/search-index.js" defer></script>
+    <script src="js/random-color-generator.js" defer></script>
 </body>
 
 </html>
