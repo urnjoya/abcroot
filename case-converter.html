@@ -2,63 +2,178 @@
 <html lang="en-US">
 
 <head>
-    <base href="../../">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- VIEWPORT -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- BASIC SEO -->
+    <title>Case Converter - Convert Text to Uppercase, Lowercase, CamelCase & More | abcroot Tools</title>
+
     <meta name="description"
-        content="Free online case converter tool to instantly change text to uppercase, lowercase, title case, sentence case, and more. Fast, secure, and browser-based – no data stored.">
-    <meta name="keywords"
-        content="case converter, uppercase converter, lowercase converter, title case converter, sentence case converter, text case changer, change text case online, free text tools">
+        content="Free online case converter that instantly transforms text into uppercase, lowercase, title case, camelCase, snake_case, kebab-case and more. Includes live preview, regex protection, text statistics and keyboard shortcuts.">
     <meta name="author" content="abcroot">
     <meta name="robots" content="index, follow">
-    <!-- Open Graph -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://abcroot.xyz/case-converter.html">
+
+    <!-- THEME -->
+    <meta name="theme-color" content="#0A315B">
+
+    <!-- FAVICONS -->
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+
+    <!-- APPLE ICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <!-- WINDOWS TILE -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/android-192.png">
+
+    <!-- APP MODE (iOS PWA) -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="ABCRoot Tools">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- OPEN GRAPH -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="abcroot">
-    <meta property="og:title" content="Free Online Case Converter Tool | abcroot">
+    <meta property="og:site_name" content="abcroot Tools">
+    <meta property="og:locale" content="en_US">
+
+    <meta property="og:title" content="Case Converter - Convert Text to Uppercase, Lowercase & More">
     <meta property="og:description"
-        content="Convert text to uppercase, lowercase, title case, and sentence case instantly. 100% free and privacy-focused.">
-    <meta property="og:url" content="https://abcroot.xyz/tools/text-tools/case-converter.html">
-    <meta property="og:image" content="https://abcroot.xyz/assets/case-converter-preview.png">
+        content="Convert text instantly into multiple formats including uppercase, lowercase, camelCase, snake_case and more.">
+
+    <meta property="og:url" content="https://abcroot.xyz/case-converter.html">
+
+    <meta property="og:image" content="https://abcroot.xyz/assets/preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="Case Converter tool preview">
 
-    <!-- Twitter Card -->
+    <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Case Converter – Uppercase, Lowercase & More">
+    <meta name="twitter:title" content="Case Converter - Convert Text to Uppercase, Lowercase & More">
     <meta name="twitter:description"
-        content="Instantly change text case online. Fast, secure, and free case conversion tool.">
-    <meta name="twitter:image" content="https://abcroot.xyz/assets/case-converter-preview.png">
-    <title>Case Converter - Free Online Tool | abcroot</title>
-    <link rel="canonical" href="https://abcroot.xyz/tools/text-tools/case-converter.html">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+        content="Convert text instantly into multiple formats including uppercase, lowercase, camelCase, snake_case and more.">
+    <meta name="twitter:image" content="https://abcroot.xyz/assets/preview.png">
+    <meta name="twitter:image:alt" content="Case Converter tool preview">
+
+    <!-- PERFORMANCE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <script src="js/analytics.js"></script>
-    <link rel="preload" href="css/main.css" as="style">
-    <link rel="preload" href="css/main-a.css" as="style">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/main-a.css">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    <!-- ANALYTICS -->
+    <script src="/js/analytics.js"></script>
+
+    <!-- CSS PRELOAD -->
+    <link rel="preload" href="/css/main.css" as="style">
+    <link rel="preload" href="/css/main-a.css" as="style">
+    <link rel="preload" href="/css/case-converter.css" as="style">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main-a.css">
+    <link rel="stylesheet" href="/css/case-converter.css">
+
+
+    <!-- WEB APPLICATION SCHEMA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Case Converter",
+      "url": "https://abcroot.xyz/case-converter.html",
+      "description": "Free online case converter that transforms text into uppercase, lowercase, title case, camelCase, snake_case, kebab-case and more.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@type": "Organization",
+        "name": "abcroot",
+        "url": "https://abcroot.xyz"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+
+    <!-- FAQ SCHEMA -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"FAQPage",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"What does this case converter do?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"This tool converts text into multiple capitalization styles including uppercase, lowercase, title case, camelCase, snake_case, kebab-case and more."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Does the tool modify URLs or emails?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"With regex protection enabled the converter can preserve URLs, emails, acronyms and HTML tags during conversion."
+          }
+        }
+      ]
+    }
+    </script>
+
+
     <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Case Converter",
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "Web",
-  "description": "Free online case converter tool to change text to uppercase, lowercase, title case, sentence case, and more instantly.",
-  "url": "https://abcroot.xyz/tools/text-tools/case-converter.html",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "creator": {
-    "@type": "Organization",
-    "name": "abcroot",
-    "url": "https://abcroot.xyz"
-  }
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Case Converter",
+  "url":"https://abcroot.xyz/case-converter.html",
+  "description":"Online case converter that transforms text into uppercase, lowercase, title case, camelCase, snake_case, kebab-case and more.",
+  "applicationCategory":"UtilityApplication",
+  "operatingSystem":"Any",
+  "browserRequirements":"Requires JavaScript",
+  "isAccessibleForFree":true,
+  "featureList":[
+    "Uppercase converter",
+    "Lowercase converter",
+    "Title case converter",
+    "Sentence case converter",
+    "Capitalized case converter",
+    "Toggle case converter",
+    "Alternative case converter",
+    "Camel case converter",
+    "Snake case converter",
+    "Kebab case converter",
+    "Pascal case converter",
+    "Smart title case converter",
+    "Dot case converter",
+    "Path case converter",
+    "Constant case converter",
+    "Train case converter",
+    "Regex text protection",
+    "Live preview",
+    "Text statistics",
+    "Keyboard shortcuts",
+    "Download result",
+    "Copy result"
+  ]
 }
 </script>
 </head>
@@ -73,7 +188,7 @@
                     <span class="search-icon">🔍</span>
                     <input type="search" id="searchInput" placeholder="Search tools..." autocomplete="off"
                         aria-label="Search tools">
-                    <div id="searchResults" class="search-results"></div>
+                    <div id="searchResults" role="listbox" class="search-results"></div>
                 </div>
             </div>
             <div class="navbar-menu">
@@ -94,11 +209,18 @@
     <main class="section-sm">
         <section class="container" style="max-width: fit-content;">
             <div class="tool-interface">
+                <section class="stats-card card-highlight" id="stats-card">
+                    <div>Character Count: <span id="stat-chars">0</span></div>
+                    <div>No space Characters Count: <span id="stat-chars-nospace">0</span></div>
+                    <div>Words Count: <span id="stat-words">0</span></div>
+                    <div>Paragraph Count: <span id="stat-paragraphs">0</span></div>
+                    <div>Sentence Count: <span id="stat-sentences">0</span></div>
+                </section>
                 <div class="p1">
                     <div class="form-group">
                         <textarea id="input-text" class="form-textarea" placeholder="Type or paste text here..."
                             rows="6" style="font-family: inherit;"></textarea>
-                        <button onclick="clearAll()" class="clear-btn btn btn-secondary mt-lg" style="width: 100%;">
+                        <button onclick="clearAll()" class="clear-btn actions-btn" style="width: 100%;">
                             <svg class="code-option__button-svg" width="17" height="17" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                 <g stroke="#ffffff" stroke-width="2" fill="none" fill-rule="evenodd"
@@ -116,10 +238,22 @@
 
                             Clear All
                         </button>
+                        <button class="" id="regex-popup-open" aria-controls="regex-popup" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                </path>
+                            </svg>
+                            Regex
+                        </button>
                     </div>
                     <div class="result-card">
-                        <div class="result-content" id="result" role="status">Your result will appear here...</div>
-                        <button onclick="copyResult()" class="copy-btn" id="copy-btn">
+                        <div class="result-content" id="result" role="status" aria-live="polite" aria-atomic="true">Your
+                            result will appear here...</div>
+                        <button onclick="copyResult()" class="copy-btn actions-btn" id="copy-btn">
                             <svg class="code-option__button-svg" width="13" height="17"
                                 xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                 <g stroke="#ffffff" stroke-width="2" fill="none" fill-rule="evenodd">
@@ -129,57 +263,146 @@
                             </svg>
                             Copy to Clipboard
                         </button>
+                        <button class="download-btn" onclick="downloadTXT()">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+                                <path d="M12 3V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+
+                                <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+
+                                <path d="M5 21H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+
+                            </svg>
+                            Download
+                        </button>
                     </div>
                 </div>
-
-                <div class="grid grid-cols-auto ans" style="gap: var(--space-sm);">
-                    <button onclick="convertCase('upper')" class="btn btn-main btn-primary" title="ALT+U"
+                <div>
+                    <button class="btn convert-btn btn-primary" data-mode="upper" title="ALT+U"
                         aria-label="Convert text to uppercase">
                         UPPERCASE
                     </button>
-                    <button onclick="convertCase('lower')" class="btn btn-main btn-primary" title="ALT+L"
+                    <button class="btn convert-btn btn-primary" data-mode="lower" title="ALT+L"
                         aria-label="Convert text to lowercase">
                         lowercase
                     </button>
-                    <button onclick="convertCase('title')" class="btn btn-main btn-primary" title="ALT+T"
+                    <button class="btn convert-btn btn-primary" data-mode="title" title="ALT+T"
                         aria-label="Convert text to title case">
                         Title Case
                     </button>
-                    <button onclick="convertCase('sentence')" class="btn btn-main btn-primary" title="ALT+S"
+                    <button class="btn convert-btn btn-primary" data-mode="sentence" title="ALT+S"
                         aria-label="Convert text to sentence case">
                         Sentence Case
                     </button>
-                    <button onclick="convertCase('capitalized')" class="btn btn-main btn-primary" title="ALT+C"
+                    <button class="btn convert-btn btn-primary" data-mode="capitalized" title="ALT+C"
                         aria-label="Convert text to capitalized case">
                         Capitalized Case
                     </button>
-                    <button onclick="convertCase('toggle')" class="btn btn-main btn-primary" title="ALT+G"
+                    <button class="btn convert-btn btn-primary" data-mode="toggle" title="ALT+G"
                         aria-label="Convert text to toogle case">
                         toGGle Case
                     </button>
-                    <button onclick="convertCase('alternative')" class="btn btn-main btn-primary" title="ALT+A"
+                    <button class="btn convert-btn btn-primary" data-mode="alternative" title="ALT+A"
                         aria-label="Convert text to alternative case">
                         Alternate Case
                     </button>
-                    <button onclick="convertCase('pascal')" class="btn btn-main btn-primary" title="ALT+P"
+                    <button class="btn convert-btn btn-primary" data-mode="pascal" title="ALT+P"
                         aria-label="Convert text to pascal case">
                         Pascal Case
                     </button>
-                    <button onclick="convertCase('camel')" class="btn btn-main btn-primary" title="ALT+M"
+                    <button class="btn convert-btn btn-primary" data-mode="camel" title="ALT+M"
                         aria-label="Convert text to camel case">
                         caMel Case
                     </button>
-                    <button onclick="convertCase('snake')" class="btn btn-main btn-primary" title="ALT+N"
+                    <button class="btn convert-btn btn-primary" data-mode="snake" title="ALT+N"
                         aria-label="Convert text to snake case">
                         sNake Case
                     </button>
-                    <button onclick="convertCase('kebab')" class="btn btn-main btn-primary" title="ALT+K"
+                    <button class="btn convert-btn  btn-primary" data-mode="kebab" title="ALT+K"
                         aria-label="Convert text to kebab case">
                         Kebab Case
                     </button>
+                    <button class="btn convert-btn  btn-primary" data-mode="smart-title" title="ALT+H"
+                        aria-label="Convert text to smart title case">
+                        Smart title
+                    </button>
+                    <button class="btn convert-btn  btn-primary" data-mode="dot" title="ALT+D"
+                        aria-label="Convert text to dot case">
+                        Dot Case
+                    </button> <button class="btn convert-btn  btn-primary" data-mode="path" title="ALT+R"
+                        aria-label="Convert text to path case">
+                        Path Case
+                    </button> <button class="btn convert-btn  btn-primary" data-mode="constant" title="ALT+O"
+                        aria-label="Convert text to constant case">
+                        Constant Case
+                    </button> <button class="btn convert-btn  btn-primary" data-mode="train" title="ALT+I"
+                        aria-label="Convert text to train case">
+                        Train Case
+                    </button>
                 </div>
-
             </div>
+            <section class="regex-popup" id="regex-popup" role="dialog" aria-modal="true" aria-labelledby="regex-title">
+                <form id="regex-form">
+                    <!-- Mode Selection (Radio) -->
+                    <div id="basic-mode">
+                        <div>
+                            <label>
+                                <input type="radio" name="mode" value="preserve" checked> Preserve
+                            </label>
+                            <label>
+                                <input type="radio" name="mode" value="change-only"> Change Only
+                            </label>
+                        </div>
+
+                        <!-- Categories (Checkboxes) -->
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="categories" value="url"> URLs</label>
+                            <label><input type="checkbox" name="categories" value="email"> Emails</label>
+                            <label><input type="checkbox" name="categories" value="acronym"> Acronyms</label>
+                            <label><input type="checkbox" name="categories" value="html"> HTML Tags</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="apply" class="popup-btn">Apply</button>
+                </form>
+            </section>
+            <section class="card">
+                <h4 class="card-title">Preview</h4>
+                <strong>UPPERCASE</strong>
+                <div class="live-result" id="live-upper"></div>
+                <strong>lowercase</strong>
+                <div class="live-result" id="live-lower"></div>
+                <strong>Title Case</strong>
+                <div class="live-result" id="live-title"></div>
+                <strong>Sentence Case</strong>
+                <div class="live-result" id="live-sentence"></div>
+                <strong>Capitalized Case</strong>
+                <div class="live-result" id="live-capitalized"></div>
+                <strong>Toggle Case</strong>
+                <div class="live-result" id="live-toggle"></div>
+                <strong>Alternative Case</strong>
+                <div class="live-result" id="live-alternative"></div>
+                <strong>Pascal Case</strong>
+                <div class="live-result" id="live-pascal"></div>
+                <strong>Camel Case</strong>
+                <div class="live-result" id="live-camel"></div>
+                <strong>Snake Case</strong>
+                <div class="live-result" id="live-snake"></div>
+                <strong>Kebab Case</strong>
+                <div class="live-result" id="live-kebab"></div>
+                <strong>Smart Title</strong>
+                <div class="live-result" id="live-smart-title"></div>
+                <strong>Dot Case</strong>
+                <div class="live-result" id="live-dot"></div>
+                <strong>Path Case</strong>
+                <div class="live-result" id="live-path"></div>
+                <strong>Constant Case</strong>
+                <div class="live-result" id="live-constant"></div>
+                <strong>Train Case</strong>
+                <div class="live-result" id="live-train"></div>
+            </section>
             <section class="card">
                 <h2 class="card-title">How to Use Case Converter</h2>
                 <p>
@@ -209,6 +432,11 @@
                         <li><strong>ALT + M</strong> --> Convert to caMel</li>
                         <li><strong>ALT + N</strong> --> Convert to sNake</li>
                         <li><strong>ALT + K</strong> --> Convert to Kebab</li>
+                        <li><strong>ALT + H</strong> --> Convert to Smart Title</li>
+                        <li><strong>ALT + D</strong> --> Convert to Dot Case</li>
+                        <li><strong>ALT + R</strong> --> Convert to Path Case</li>
+                        <li><strong>ALT + O</strong> --> Convert to Constant Case</li>
+                        <li><strong>ALT + I</strong> --> Convert to Train Case</li>
                     </ul>
                     <hr>
                     <h3>Case Converter Examples</h3>
@@ -256,7 +484,135 @@
                         <li><strong>Kebab Case:</strong><br>
                             welcome-to-our-amazing-tool.
                         </li>
+                        <li><strong>Smart Title Case:</strong><br>
+                            Welcome to Our Amazing Tool.
+                        </li>
+                        <li><strong>Dot Case:</strong><br>
+                            welcome.to.our.amazing.tool.
+                        </li>
+                        <li><strong>Path Case:</strong><br>
+                            welcome/to/our/amazing/tool.
+                        </li>
+                        <li><strong>Constant Case:</strong><br>
+                            WELCOME_TO_OUR_AMAZING_TOOL.
+                        </li>
+                        <li><strong>Train Case:</strong><br>
+                            Welcome-To-Our-Amazing-Tool.
+                        </li>
                     </ul>
+                </div>
+            </section>
+            <section class="card" aria-labelledby="what-is-heading">
+                <h2 id="what-is-heading" class="card-title">What Is a Case Converter?</h2>
+
+                <p>
+                    A <strong>Case Converter</strong> is a text formatting tool that automatically changes the
+                    capitalization
+                    style of text. Instead of manually editing letters, the tool instantly converts text into
+                    different formats such as <strong>UPPERCASE, lowercase, Title Case, Sentence Case, camelCase,
+                        snake_case, kebab-case, PascalCase</strong> and other structured text styles used in writing,
+                    programming, and web development.
+                </p>
+
+                <p>
+                    This page allows you to quickly transform text into multiple case styles for
+                    content writing, coding, file naming, URLs, headings, and formatting tasks.
+                </p>
+
+                <div class="case-explanation">
+
+                    <article>
+                        <h3>UPPERCASE</h3>
+                        <p>Converts all letters in the text to capital letters. Often used for headings or emphasis.</p>
+                    </article>
+
+                    <article>
+                        <h3>lowercase</h3>
+                        <p>Converts all letters to small letters. Useful for normal text formatting.</p>
+                    </article>
+
+                    <article>
+                        <h3>Title Case</h3>
+                        <p>Capitalizes the first letter of each word in the text. Commonly used in article titles and
+                            headings.</p>
+                    </article>
+
+                    <article>
+                        <h3>Sentence Case</h3>
+                        <p>Capitalizes only the first letter of the first word of a sentence while the rest remain
+                            lowercase.</p>
+                    </article>
+
+                    <article>
+                        <h3>Capitalized Case</h3>
+                        <p>Capitalizes the first letter of every word while keeping the rest of the letters lowercase.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Toggle Case</h3>
+                        <p>Reverses the case of every letter. Uppercase letters become lowercase and lowercase letters
+                            become uppercase.</p>
+                    </article>
+
+                    <article>
+                        <h3>Alternate Case</h3>
+                        <p>Alternates between uppercase and lowercase letters throughout the text.</p>
+                    </article>
+
+                    <article>
+                        <h3>PascalCase</h3>
+                        <p>Joins words together without spaces while capitalizing the first letter of every word. Often
+                            used for class names in programming.</p>
+                    </article>
+
+                    <article>
+                        <h3>camelCase</h3>
+                        <p>Similar to PascalCase but the first word begins with a lowercase letter. Commonly used for
+                            variables in programming languages.</p>
+                    </article>
+
+                    <article>
+                        <h3>snake_case</h3>
+                        <p>Replaces spaces with underscores and keeps letters lowercase. Frequently used in programming
+                            and database field names.</p>
+                    </article>
+
+                    <article>
+                        <h3>kebab-case</h3>
+                        <p>Replaces spaces with hyphens. Commonly used in URLs and CSS class names.</p>
+                    </article>
+
+                    <article>
+                        <h3>Smart Title Case</h3>
+                        <p>A smarter version of Title Case that avoids capitalizing short words like “and”, “of”, or
+                            “the” unless they appear at the beginning.</p>
+                    </article>
+
+                    <article>
+                        <h3>Dot Case</h3>
+                        <p>Replaces spaces with dots between words. Often used in file names or structured identifiers.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Path Case</h3>
+                        <p>Replaces spaces with forward slashes to create a path-like structure, commonly used in folder
+                            paths or URL structures.</p>
+                    </article>
+
+                    <article>
+                        <h3>Constant Case</h3>
+                        <p>Converts text into uppercase words separated by underscores. Frequently used for constant
+                            variables in programming.</p>
+                    </article>
+
+                    <article>
+                        <h3>Train Case</h3>
+                        <p>Capitalizes every word and separates them with hyphens, similar to a train of words connected
+                            by dashes.</p>
+                    </article>
+
                 </div>
             </section>
             <section class="card">
@@ -264,66 +620,105 @@
                 <div class="card-body">
                     <ul class="related-tools">
                         <li>
-                            <a href="tools/text-tools/find-replace.html" hreflang="en" 
+                            <a href="tools/text-tools/find-replace.html" hreflang="en" target="_blank"
                                 aria-label="Open Find & Replace Tool" title="Find & Replace Tool">Find & Replace</a>
                         </li>
                         <li>
-                            <a href="tools/text-tools/slug-generator.html" hreflang="en" 
+                            <a href="tools/text-tools/slug-generator.html" hreflang="en" target="_blank"
                                 aria-label="Open Slug Generator Tool" title="Free Slug Generator Tool">Slug
                                 Generator</a>
                         </li>
                         <li>
-                            <a href="tools/text-tools/random-text-generator.html" hreflang="en" 
+                            <a href="tools/text-tools/random-text-generator.html" hreflang="en" target="_blank"
                                 aria-label="Open Random Text Generator Tool"
                                 title="Plain text, HTML, Lorem Ipsum">Random Text Generator</a>
                         </li>
                         <li>
-                            <a href="tools/text-tools/text-calculator.html" hreflang="en" 
+                            <a href="tools/text-tools/text-calculator.html" hreflang="en" target="_blank"
                                 aria-label="Open Text Calculator Tool"
                                 title="Reading & Speaking Time, Average Word Length">Text Calculator</a>
                         </li>
                         <li>
-                            <a href="tools/text-tools/text-cleaner.html" hreflang="en" 
+                            <a href="tools/text-tools/text-cleaner.html" hreflang="en" target="_blank"
                                 aria-label="Open Text Cleaner Tool"
                                 title="Remove Duplicate words, Punctuation, Special characters, Numbers, HTML tags, Emojis, Stop words & Fix spacing issues ">Text
                                 Cleaner</a>
                         </li>
                         <li>
-                            <a href="tools/text-tools/text-line-tools.html" hreflang="en" 
+                            <a href="tools/text-tools/text-line-tools.html" hreflang="en" target="_blank"
                                 aria-label="Open Text Line Tool" title="">Line Break Remover</a>
                         </li>
                         <li>
-                            <a href="tools/text-tools/text-reverser.html" hreflang="en" 
+                            <a href="tools/text-tools/text-reverser.html" hreflang="en" target="_blank"
                                 aria-label="Open Text Reverser Tool" title="Free Text Reverse Tool">Text Reverser</a>
                         </li>
                         <li>
-                            <a href="tools/text-tools/text-shuffle.html" hreflang="en" 
+                            <a href="tools/text-tools/text-shuffle.html" hreflang="en" target="_blank"
                                 aria-label="Open Text shuffle Tool" title="Free Text Shuffle Tool">Text shuffle</a>
                         </li>
                         <li>
-                            <a href="tools/text-tools/text-sorter.html" hreflang="en" 
+                            <a href="tools/text-tools/text-sorter.html" hreflang="en" target="_blank"
                                 aria-label="Open Text Sorter Tool" title="Free Text Sorter Tool">Text Sorter</a>
                         </li>
                         <li>
-                            <a href="tools/text-tools/whitespace-remover.html" hreflang="en" 
+                            <a href="tools/text-tools/whitespace-remover.html" hreflang="en" target="_blank"
                                 aria-label="Open Whitespace Remover Tool" title="Free Whitespace Remover">Whitespace
                                 Remover</a>
                         </li>
                         <li>
-                            <a href="tools/text-tools/word-counter.html" hreflang="en" 
+                            <a href="tools/text-tools/word-counter.html" hreflang="en" target="_blank"
                                 aria-label="Open Word Counter Tool" title="Word Counter Tool">Word Counter</a>
                         </li>
                     </ul>
                 </div>
             </section>
-            <section class="card">
-                <h2>Frequently Asked Questions</h2>
+            <section class="card faq-section" aria-labelledby="faq-heading">
+                <h2 id="faq-heading" class="card-title">Frequently Asked Questions</h2>
 
-                <h3>What is a case converter?</h3>
-                <p>A case converter is a tool that changes the capitalization format of text.</p>
+                <article class="faq-item">
+                    <h3>What does this Case Converter page do?</h3>
+                    <p>
+                        This page allows you to quickly convert text into multiple capitalization styles.
+                        You can paste or type text and instantly transform it into formats such as
+                        uppercase, lowercase, title case, sentence case, capitalized case, toggle case, alternative
+                        case, camelCase, snake_case, kebab-case, PascalCase, smart title case, dot case, path case,
+                        constant case, train case other text styles used in writing and programming.
+                    </p>
+                </article>
 
-                <h3>Why use a case converter?</h3>
-                <p>It helps quickly format text for writing, coding, and documentation.</p>
+                <article class="faq-item">
+                    <h3>Who can use this tool?</h3>
+                    <p>
+                        This tool is useful for writers, developers, editors, students, and anyone who
+                        needs to format text quickly without manually editing each letter.
+                    </p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>Why are different text cases important?</h3>
+                    <p>
+                        Different text cases are used for different purposes. For example,
+                        camelCase and snake_case are common in programming, while Title Case
+                        is used for headings and article titles.
+                    </p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>Can I convert large text blocks?</h3>
+                    <p>
+                        Yes. You can paste paragraphs or large blocks of text into the input area,
+                        and the tool will instantly convert the entire text into the selected case style.
+                    </p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>Is my text stored or sent to a server?</h3>
+                    <p>
+                        No. The case conversion happens directly in your browser, which means
+                        your text is not stored or uploaded anywhere.
+                    </p>
+                </article>
+
             </section>
         </section>
     </main>
@@ -333,10 +728,10 @@
         <div class="category-modal-content">
             <div class="category-modal-header">
                 <h3>Select Category</h3>
-                <button class="category-close" id="categoryClose">&times;</button>
+                <button type="button" class="category-close" id="categoryClose">&times;</button>
             </div>
             <div class="category-modal-body grid grid-cols-2 gap-lg">
-                <a href="tools/text-tools/" class="category-popup-card">
+                <a href="/text-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true" focusable="false">
@@ -347,7 +742,7 @@
                         </svg></div>
                     <span>Text Tools</span>
                 </a>
-                <a href="tools/developer-tools/" class="category-popup-card">
+                <a href="/developer-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true" focusable="false">
@@ -356,7 +751,7 @@
                         </svg></div>
                     <span>Developer Tools</span>
                 </a>
-                <a href="tools/security-tools/" class="category-popup-card">
+                <a href="/security-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true" focusable="false">
@@ -365,7 +760,7 @@
                         </svg></div>
                     <span>Security</span>
                 </a>
-                <a href="tools/utility-tools/" class="category-popup-card">
+                <a href="/utility-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true" focusable="false">
@@ -390,19 +785,19 @@
                 <div>
                     <h4 class="footer-section-title">Categories</h4>
                     <ul class="footer-links">
-                        <li><a href="tools/text-tools/" class="footer-link">Text & Writing Tools</a></li>
-                        <li><a href="tools/developer-tools/" class="footer-link">Developer Tools</a></li>
-                        <li><a href="tools/security-tools/" class="footer-link">Security & Privacy</a></li>
-                        <li><a href="tools/utility-tools/" class="footer-link">Random & Utility</a></li>
+                        <li><a href="/text-tools/" class="footer-link">Text & Writing Tools</a></li>
+                        <li><a href="/developer-tools/" class="footer-link">Developer Tools</a></li>
+                        <li><a href="/security-tools/" class="footer-link">Security & Privacy</a></li>
+                        <li><a href="/utility-tools/" class="footer-link">Random & Utility</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="footer-section-title">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact</a></li>
-                        <li><a href="sitemap.html" class="footer-link">Sitemap</a></li>
-                        <li><a href="changelog.html" class="footer-link">changelog</a></li>
+                        <li><a href="/about.html" class="footer-link">About Us</a></li>
+                        <li><a href="/contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="/sitemap.html" class="footer-link">Sitemap</a></li>
+                        <li><a href="/changelog.html" class="footer-link">changelog</a></li>
                     </ul>
                 </div>
                 <div>
@@ -420,17 +815,14 @@
             </div>
         </section>
     </footer>
-    <script src="js/main.js" defer></script>
-    <script src="js/case-converter.js" defer></script>
+    <script src="/js/main.js" defer></script>
+    <script src="/js/case-converter.js" defer></script>
     <!-- FOR FOOTER YEAR UPDATE -->
-    <script src="js/main-j.js" defer></script>
+    <script src="/js/main-j.js" defer></script>
     <!-- FOR MODEL OPEN -->
-    <script src="js/main-m.js" defer></script>
+    <script src="/js/main-m.js" defer></script>
     <!-- FOR SEARCH BY INDEX -->
-    <script src="js/search-index.js" defer></script>
-    <!-- COPY AND CLEAR -->
-    <script src="js/main-c.js" defer></script>
+    <script src="/js/search-index.js" defer></script>
 </body>
 
 </html>
-
