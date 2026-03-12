@@ -1,28 +1,3 @@
-.clear-btn {
-    background-color: #0e3972;
-    color: #fff;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    text-transform: uppercase;
-    font-weight: 600;
-    border-radius: 0 0 10px 10px;
-}
-
-.copy-btn {
-    background-color: #0e3972;
-    color: #fff;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    text-transform: uppercase;
-    font-weight: 600;
-    border-radius: 0 0 10px 10px;
-    padding: 12px 24px;
-}
-
 .btn-secondary:hover {
     background-color: #0e3972;
     color: #fff;
@@ -44,12 +19,6 @@
     border-top-right-radius: 0;
 }
 
-.copy-btn.copied {
-    margin-top: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-
 .form-textarea,
 .result-content {
     border-bottom-left-radius: 0;
@@ -60,6 +29,7 @@
 
 .form-group,
 .result-card {
+    position: relative;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
@@ -78,6 +48,9 @@
 .result-content {
     max-height: 100%;
 }
+
+/*  */
+
 
 @media (max-width:767px) {
 
@@ -140,8 +113,9 @@
     }
 
     .form-group button,
-    .result-card button {
+    .result button {
         width: 100%;
         height: auto;
     }
+
 }
