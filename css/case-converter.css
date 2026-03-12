@@ -1,0 +1,118 @@
+.regex-popup {
+    display: none;
+    /* hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    z-index: 1000;
+}
+
+.regex-popup.active {
+    display: block;
+}
+
+.checkbox-group {
+    margin-top: 10px;
+}
+
+.popup-btn {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-btn:hover {
+    background: #0056b3;
+}
+
+/* Optional: overlay for background */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.popup-overlay.active {
+    display: block;
+}
+
+#regex-popup-open {
+    position: absolute;
+    width: fit-content;
+    bottom: 165px;
+    /* Distance from bottom */
+    right: 1px;
+    /* Distance from right */
+
+    /* Optional: Styling to make it look like a floating action button */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 7px;
+    font-weight: bold;
+    /* background: wheat; */
+    background-color: transparent;
+    /* color: #ffffff; */
+    border: 1px solid whitesmoke;
+    border-radius: var(--radius-sm);
+}
+
+#stats-card {
+    display: flex;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: var(--space-xs);
+    padding: 0 var(--space-xs);
+    border-radius: var(--radius-sm);
+}
+
+.stats-card span {
+    font-variant-numeric: tabular-nums;
+    min-width: 4ch;
+    display: inline-block;
+    text-align: right;
+}
+
+#stats-card div:nth-child(2) {
+    display: none;
+}
+
+#stats-card div {
+    width: max-content;
+    padding: 4px;
+    border-right: 2px solid white;
+}
+
+#stats-card div span {
+    background-color: white;
+    padding: 4px;
+    border-radius: var(--radius-lg);
+}
+
+@media (min-width: 768px) {
+    #stats-card {
+        font-size: 12px;
+        display: flex;
+    }
+
+    #stats-card div {
+        margin-right: var(--space-sm);
+    }
+
+    #stats-card div:nth-child(2) {
+        display: block;
+    }
+
+}
