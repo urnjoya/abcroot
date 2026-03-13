@@ -379,19 +379,27 @@ function downloadTXT() {
     }
     else {
 
+            // current time
+    const now = new Date();
+
+    const timestamp =
+        String(now.getHours()).padStart(2, "0") + "-" +
+        String(now.getMinutes()).padStart(2, "0") + "-" +
+        String(now.getSeconds()).padStart(2, "0");
         const blob = new Blob([text], { type: "text/plain" });
 
         const link = document.createElement("a");
 
         link.href = URL.createObjectURL(blob);
-        link.download = "converted-text.txt";
+        // link.download = "converted-text.txt";
+        // filename with time
+        link.download = `converted-text-${timestamp}.txt`;
 
         link.click();
         showNotification("Download successfull", 'success')
     }
 
-}
-// BY KEY
+}// BY KEY
 document.addEventListener("keydown", function (e) {
     if (!e.altKey) return;
 
@@ -552,8 +560,15 @@ function copyResult() {
     }
 }
 function clearAll() {
-    document.getElementById('input-text').value = '';
-    document.getElementById('result').textContent = 'Your result will appear here...';
-    const txe = '';
-    updateStats(txe);
+    if (document.getElementById('input-text').value == '' && document.getElementById('result').textContent == 'Your result will appear here...') {
+        showNotification('Nothing to clear!', 'error');
+        return;
+    }
+    else {
+        document.getElementById('input-text').value = '';
+        document.getElementById('result').textContent = 'Your result will appear here...';
+        const txe = '';
+        updateStats(txe);
+        showNotification('All clear', 'success');
+    }
 }
