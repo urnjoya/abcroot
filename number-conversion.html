@@ -2,16 +2,43 @@
 <html lang="en-US">
 
 <head>
-    <base href="../../">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Converter - Binary, Decimal, Hex, Octal & Text | abcroot</title>
     <meta name="description"
         content="Free online number conversion tool to instantly convert numbers between binary, decimal, octal, hexadecimal, and text. Fast, secure, and browser-based – no data stored.">
     <meta name="keywords"
         content="number converter, binary to decimal, decimal to binary, octal converter, hexadecimal converter, text to number, number base conversion, online number tools, free developer tools">
     <meta name="author" content="abcroot">
     <meta name="robots" content="index, follow">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://abcroot.xyz/number-conversion.html">
+
+    <!-- THEME -->
+    <meta name="theme-color" content="#0A315B">
+
+    <!-- FAVICONS -->
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+
+    <!-- APPLE ICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+    <!-- WINDOWS TILE -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/android-192.png">
+
+    <!-- APP MODE (iOS PWA) -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-title" content="abcroot Tools">
+    <meta name="mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -19,51 +46,107 @@
     <meta property="og:title" content="Free Online Number Converter Tool | abcroot">
     <meta property="og:description"
         content="Convert numbers instantly between binary, decimal, octal, hexadecimal, and text. 100% free and privacy-focused online developer tool.">
-    <meta property="og:url" content="https://abcroot.xyz/tools/developer-tools/number-converter.html">
-    <meta property="og:image" content="https://abcroot.xyz/assets/number-converter-preview.png">
+    <meta property="og:url" content="https://abcroot.xyz/number-conversion.html">
+    <meta property="og:image" content="https://abcroot.xyz/assets/preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="tool preview">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Number Converter – Binary, Decimal, Hex, Octal & Text">
     <meta name="twitter:description"
         content="Instantly convert numbers between different bases and text online. Free, secure, and browser-based developer tool.">
-    <meta name="twitter:image" content="https://abcroot.xyz/assets/number-converter-preview.png">
+    <meta name="twitter:image" content="https://abcroot.xyz/assets/preview.png">
+    <meta name="twitter:image:alt" content="Case Converter tool preview">
 
-    <title>Number Converter – Binary, Decimal, Hex, Octal & Text | abcroot</title>
-    <link rel="canonical" href="https://abcroot.xyz/tools/developer-tools/number-converter.html">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <!-- PERFORMANCE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <script src="js/analytics.js"></script>
-    <link rel="preload" href="css/main.css" as="style">
-    <link rel="preload" href="css/number-conversion.css" as="style">
-    <link rel="preload" href="css/main-a.css" as="style">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/number-conversion.css">
-    <link rel="stylesheet" href="css/main-a.css">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+
+    <!-- ANALYTICS -->
+    <script src="/js/analytics.js"></script>
+
+    <!-- CSS PRELOAD -->
+    <link rel="preload" href="/css/main.css" as="style">
+    <link rel="preload" href="/css/number-conversion.css" as="style">
+    <link rel="preload" href="/css/main-a.css" as="style">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/number-conversion.css">
+    <link rel="stylesheet" href="/css/main-a.css">
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
+  "@type": "WebApplication",
   "name": "Number Converter",
-  "applicationCategory": "DeveloperTool",
-  "operatingSystem": "Web",
+  "url": "https://abcroot.xyz/number-conversion.html",
   "description": "Free online number conversion tool to convert numbers between binary, decimal, octal, hexadecimal, and text instantly.",
-  "url": "https://abcroot.xyz/tools/developer-tools/number-converter.html",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "creator": {
-    "@type": "Organization",
-    "name": "abcroot",
-    "url": "https://abcroot.xyz"
-  }
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@type": "Organization",
+        "name": "abcroot",
+        "url": "https://abcroot.xyz"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+        <!-- FAQ SCHEMA -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"FAQPage",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"What is a number base converter?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"A number base converter is a tool that converts numbers between different numeral systems such as binary, decimal, octal, and hexadecimal."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Why are different number systems used in computing?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Different number systems are used because computers process data in binary, while humans commonly use decimal. Hexadecimal and octal are often used as shorter representations of binary values."
+          }
+        }
+      ]
+    }
+    </script>
+        <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"Number Conversion",
+  "url":"https://abcroot.xyz/case-converter.html",
+  "description":"Free online number conversion tool to instantly convert numbers between binary, decimal, octal, hexadecimal, and text. Fast, secure, and browser-based – no data stored.",
+  "applicationCategory":"UtilityApplication",
+  "operatingSystem":"Any",
+  "browserRequirements":"Requires JavaScript",
+  "isAccessibleForFree":true,
+  "featureList":[
+  "Convert binary, decimal, octal, and hexadecimal numbers instantly",
+  "Binary to decimal, hex, and octal conversion",
+  "Decimal to binary, hexadecimal, and octal conversion",
+  "Hexadecimal and octal number conversion",
+  "Encode text to binary, decimal, octal, or hexadecimal",
+  "Decode binary or hexadecimal values back to text",
+  "Support UTF-8 based text encoding and decoding",
+  "Validate number input for each base automatically",
+  "Copy converted results to clipboard",
+  "Reset the converter and clear all values quickly"
+  ]
 }
 </script>
 </head>
@@ -71,7 +154,7 @@
 <body>
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container navbar-container">
-            <a href="" class="navbar-logo" aria-label="abcroot homepage">abcroot</a>
+            <a href="/" class="navbar-logo" aria-label="abcroot homepage">abcroot</a>
             <div class="navbar-search">
                 <div class="search-input">
                     <span class="search-icon">🔍</span>
@@ -82,8 +165,8 @@
             </div>
             <div class="navbar-menu">
                 <ul class="navbar-links">
-                    <li><a href="about.html" class="navbar-link">About</a></li>
-                    <li><a href="contact.html" class="navbar-link">Contact</a></li>
+                    <li><a href="/about.html" class="navbar-link">About</a></li>
+                    <li><a href="/contact.html" class="navbar-link">Contact</a></li>
                     <li class="navbar-link" id="categoryBtn">Category</li>
                 </ul>
             </div>
@@ -119,7 +202,6 @@
                                 <option value="text">Text</option>
                             </select>
                         </div>
-
                     </div>
                     <div class="p1">
                         <div class="form-group">
@@ -127,7 +209,7 @@
                             <!-- Converted result will appear here after clicking Convert. -->
                             <textarea id="input-text" class="form-textarea" placeholder="Type or paste text here..."
                                 rows="6" style="font-family: inherit;"></textarea>
-                            <button onclick="clearAll()" class="clear-btn btn btn-secondary mt-lg" style="width: 100%;">
+                            <button onclick="clearAll()" class="clear-btn btn btn-secondary mt-lg actions-btn" style="width: 100%;">
                                 <svg class="code-option__button-svg" width="17" height="17" viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                     <g stroke="#ffffff" stroke-width="2" fill="none" fill-rule="evenodd"
@@ -148,7 +230,7 @@
                         </div>
                         <div class="result-card">
                             <div class="result-content" id="result" role="status" aria-live="polite">Your result will appear here...</div>
-                            <button onclick="copyResult()" class="copy-btn" id="copy-btn">
+                            <button onclick="copyResult()" class="copy-btn actions-btn" id="copy-btn">
                                 <svg class="code-option__button-svg" width="13" height="17"
                                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
                                     <g stroke="#ffffff" stroke-width="2" fill="none" fill-rule="evenodd">
@@ -218,7 +300,7 @@
                 <div class="card-body">
                     <ul class="related-tools">
                         <li>
-                            <a href="tools/developer-tools/text-markdown-converter.html" hreflang="en" 
+                            <a href="/text-markdown-converter.html" hreflang="en" target="_blank"
                                 aria-label="Open Text Markdown Converter Tool" title="Text Markdown Converter Tool">Text
                                 Markdown Converter</a>
                         </li>
@@ -260,7 +342,7 @@
                 <button class="category-close" id="categoryClose">&times;</button>
             </div>
             <div class="category-modal-body grid grid-cols-2 gap-lg">
-                <a href="tools/text-tools/" class="category-popup-card">
+                <a href="/text-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -271,7 +353,7 @@
                         </svg></div>
                     <span>Text Tools</span>
                 </a>
-                <a href="tools/developer-tools/" class="category-popup-card">
+                <a href="/developer-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -280,7 +362,7 @@
                         </svg></div>
                     <span>Developer Tools</span>
                 </a>
-                <a href="tools/security-tools/" class="category-popup-card">
+                <a href="/security-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -289,7 +371,7 @@
                         </svg></div>
                     <span>Security</span>
                 </a>
-                <a href="tools/utility-tools/" class="category-popup-card">
+                <a href="/utility-tools/" class="category-popup-card">
                     <div class="popup-icon"> <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
                             aria-hidden="true">
@@ -302,7 +384,7 @@
         </div>
     </div>
     <footer class="footer">
-        <div class="container">
+        <section class="container">
             <div class="footer-grid">
                 <div>
                     <h3 class="footer-section-title">abcroot</h3>
@@ -313,45 +395,43 @@
                 <div>
                     <h4 class="footer-section-title">Categories</h4>
                     <ul class="footer-links">
-                        <li><a href="tools/text-tools/" class="footer-link">Text & Writing Tools</a></li>
-                        <li><a href="tools/developer-tools/" class="footer-link">Developer Tools</a></li>
-                        <li><a href="tools/security-tools/" class="footer-link">Security & Privacy</a></li>
-                        <li><a href="tools/utility-tools/" class="footer-link">Random & Utility</a></li>
+                        <li><a href="/text-tools/" class="footer-link">Text & Writing Tools</a></li>
+                        <li><a href="/developer-tools/" class="footer-link">Developer Tools</a></li>
+                        <li><a href="/security-tools/" class="footer-link">Security & Privacy</a></li>
+                        <li><a href="/utility-tools/" class="footer-link">Random & Utility</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="footer-section-title">Company</h4>
                     <ul class="footer-links">
-                        <li><a href="about.html" class="footer-link">About Us</a></li>
-                        <li><a href="contact.html" class="footer-link">Contact</a></li>
-                        <li><a href="changelog.html" class="footer-link">Changelog</a></li>
-                        <li><a href="sitemap.html" class="footer-link">Sitemap</a></li>
+                        <li><a href="/about.html" class="footer-link">About Us</a></li>
+                        <li><a href="/contact.html" class="footer-link">Contact</a></li>
+                        <li><a href="/changelog.html" class="footer-link">Changelog</a></li>
+                        <li><a href="/sitemap.html" class="footer-link">Sitemap</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="footer-section-title">Legal</h4>
                     <ul class="footer-links">
-                        <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
-                        <li><a href="disclaimer.html" class="footer-link">Disclaimer</a></li>
+                        <li><a href="/privacy.html" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="/terms.html" class="footer-link">Terms & Conditions</a></li>
+                        <li><a href="/disclaimer.html" class="footer-link">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; <span class="f-year"></span> abcroot. All rights reserved. Built with care for productivity.
             </div>
-        </div>
+        </section>
     </footer>
-    <script src="js/main.js" defer></script>
-    <script src="js/number-conversion.js" defer></script>
+    <script src="/js/main.js" defer></script>
+    <script src="/js/number-conversion.js" defer></script>
     <!-- FOR FOOTER YEAR UPDATE -->
-    <script src="js/main-j.js" defer></script>
+    <script src="/js/main-j.js" defer></script>
     <!-- FOR MODEL OPEN -->
-    <script src="js/main-m.js" defer></script>
+    <script src="/js/main-m.js" defer></script>
     <!-- FOR SEARCH BY INDEX -->
-    <script src="js/search-index.js" defer></script>
-    <!-- COPY AND CLEAR -->
-    <script src="js/main-c.js" defer></script>
+    <script src="/js/search-index.js" defer></script>
 </body>
 
 </html>
