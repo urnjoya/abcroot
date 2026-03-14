@@ -1,9 +1,9 @@
-const BASE_PATH = window.location.origin + window.location.pathname.split('/').slice(0, 2).join('/');
+// const BASE_PATH = window.location.origin + window.location.pathname.split('/').slice(0, 2).join('/');
 
 
-        function navigateTo(path) {
-            window.location.href = BASE_PATH + '/' + path;
-        }
+//         function navigateTo(path) {
+//             window.location.href = BASE_PATH + '/' + path;
+//         }
         let pages = [];
 
         fetch('https://abcroot.xyz/data/json/search-index.json')
