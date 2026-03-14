@@ -73,23 +73,19 @@ function cleanInput(value, base) {
 // Main Conversion Function
 // ==============================
 function perform() {
+    const inputField = document.getElementById("input-text");
     const input = inputField.value.trim();
     const fromBase = document.getElementById("base-from").value;
     const toBase = document.getElementById("base-to").value;
     const resultElement = document.getElementById("result");
-    inputField.addEventListener("input", function () {
-    inputField.value = cleanInput(inputField.value, baseFrom.value);
-    resultElement.textContent = "";
-    });
+
     if (!input) {
         resultElement.textContent = "Please enter a value.";
-        showNotification('Please enter a value!', 'error');
         return;
     }
 
     if (fromBase === toBase) {
         resultElement.textContent = "From and To bases must be different.";
-        showNotification('From and To bases must be different.!', 'error');
         return;
     }
 
@@ -174,7 +170,7 @@ function perform() {
                 decimalValue = BigInt("0b" + input.replace(/\s+/g, ""));
                 break;
             case "decimal":
-                decimalValue = BigInt(input.replace(/\s+/g, ""));
+                decimalValue = BigInt(input);
                 break;
             case "octal":
                 decimalValue = BigInt("0o" + input.replace(/\s+/g, ""));
@@ -207,4 +203,26 @@ function perform() {
         resultElement.textContent = error.message;
     }
 }
-
+// 
+// COPY
+function copyResult() {
+    const result1 = document.getElementById('result').textContent;
+    if (result1 == "Your result will appear here...") {
+        showNotification('Please enter some text first', 'error')
+        return
+    }
+    else {
+        copyToClipboard(result1, document.getElementById('copy-btn'));
+    }
+}
+function clearAll() {
+    if (document.getElementById('input-text').value == '' && document.getElementById('result').textContent == 'Your result will appear here...') {
+        showNotification('Nothing to clear!', 'error');
+        return;
+    }
+    else {
+        document.getElementById('input-text').value = '';
+        document.getElementById('result').textContent = 'Your result will appear here...';
+        showNotification('All clear', 'success');
+    }
+}
