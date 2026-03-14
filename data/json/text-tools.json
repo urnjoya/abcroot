@@ -90,7 +90,7 @@
         "rank-id": "6",
         "type": "tool",
         "title": "Text Analysis",
-        "slug": "text-analysis.html",
+        "slug": "text-analysis-tool.html",
         "category": "text-tool",
         "icon": "🔤",
         "short_description": "Perform quick numeric calculations directly within text including sums, totals, and averages without switching to a separate calculator.",
