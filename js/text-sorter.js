@@ -45,7 +45,7 @@ function convertCase(mode) {
                 return true;
             });
 
-            result = uniqueLines.join(' ');
+            result = uniqueLines.join('/n');
         }
             break;
         // line sort by length
